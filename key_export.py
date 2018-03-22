@@ -33,7 +33,7 @@ bpy.data.scenes['Main'].render.resolution_y = bpy.data.objects['Sheet'].scale[1]
 
 #Render keyframe by keyframe
 
-def print_cel(gp_layer_name):
+def key_export(gp_layer_name):
     bpy.context.scene.frame_set(bpy.data.scenes['Main'].frame_start)
     
     key_count = 1
@@ -54,17 +54,17 @@ bpy.context.scene.frame_set(bpy.data.scenes['Main'].frame_start)
 #print all cels here
 
 #cel_count = len(bpy.data.grease_pencil['GPencil_Main'].layers)
-for each_layer in bpy.data.grease_pencil['GPencil_Main'].layers: #hide all layers
-    each_layer.hide = True
+for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers: #hide all layers
+    each_gp_layer.hide = True
 
-for each_layer in bpy.data.grease_pencil['GPencil_Main'].layers:#print each layers
-    each_layer.hide = False
-    print_cel(each_layer.info)
-    each_layer.hide = True
+for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers:#print each layers
+    each_gp_layer.hide = False
+    key_export(each_gp_layer.info)
+    each_gp_layer.hide = True
 
 
-for each_layer in bpy.data.grease_pencil['GPencil_Main'].layers: #unhide all GPencil Layers
-    each_layer.hide = False
+for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers: #unhide all GPencil Layers
+    each_gp_layer.hide = False
 
 
 #reset Camera
