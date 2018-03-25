@@ -1,4 +1,7 @@
 ## BL2D Git-Ignore file list ##
 
-*.blend1 ## blender sometimes automatically generates this file
-*.png~ ## Krita creates this temp file. (Other programs might?)
+#blender might create this temp file
+*.blend1 
+
+#don't know why, but it seems krita creates this temp file. 
+*.png~ 
