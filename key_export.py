@@ -48,9 +48,9 @@ for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers: #hide all la
     each_gp_layer.hide = True
 
 for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers:#print each layers
-    each_gp_layer.hide = False
+    each_gp_layer.hide = False #unhide current layer and...
     key_export(each_gp_layer.info)
-    each_gp_layer.hide = True
+    each_gp_layer.hide = True #...hide current layer again.
 
 for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers: #unhide all GPencil Layers
     each_gp_layer.hide = False
