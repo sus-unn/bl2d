@@ -39,7 +39,7 @@ Template Output:
 
 Required:
 
-    Add 'bl2d.py' as Add-On(Install Add-On from file)
+    Add add-on zip file as Add-On(Install Add-On from file)
     
     Enable 'International fonts'
 	Blender 
@@ -66,7 +66,7 @@ Recommanded:
 	
 	4. In Blender User Preferences menu: install Add-on from zip file
 	
-	5. Open "Template_A4.blend"
+	5. Open "template.blend"
 	
 	6. 'Save as' or copy template file in directory\name you want. You must not edit template file.
 	
