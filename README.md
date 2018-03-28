@@ -17,7 +17,7 @@ Basic Info:
 	
 	Contact me: typ3ys.xz@gmail.com, https://twitter.com/SusunnK  (DM available)
 	
-	Repository: https://github.com/sus-unn/sus_bl2d
+	Repository: https://github.com/sus-unn/bl2d
 	
 	
 #Mirror: not ready yet..
@@ -60,9 +60,9 @@ Recommanded:
 
 	1. install blender 2.79 or later versions. ("AT LEAST 2.79, template or script might not work in earlier versions")
 	
-	2. download from https://github.com/sus-unn/sus_bl2d as zip file, or in terminal: "git clone https://github.com/sus-unn/sus_bl2d"
+	2. download from https://github.com/sus-unn/bl2d as zip file, or in terminal: "git clone https://github.com/sus-unn/bl2d.git"
 	
-	3. DONNOT UNZIP ZIP FILE. If you've downloaded through git directly, zip all files in one .zip file.
+	3. DONNOT UNZIP ZIP FILE. If you've downloaded through git client, zip all files in one .zip file.
 	
 	4. In Blender User Preferences menu: install Add-on from zip file
 	
@@ -110,14 +110,5 @@ For Developers:
 #Please contribute
 
 	1. install git
-	2. in terminal(Windows: Powershell or cmd), type: "git clone https://github.com/sus-unn/sus_bl2d"
-	3. when changes are made and saved, or if you want to add a file: "git add file_you_want_to_add"
-	
-#if file is in different directory, you will have to type directory of the file as well
-
-	4. if new to git, or just-installed-git: in terminal, type: "git config --global user.email "your_email_adresss""
-	5. to actually commit changes, in terminal, type: "git commit -m "Changes_you've_made""
-	6. if you want to apply changes to the main branch my repository, type: "git push origin master"
-	7. you might make branches of your own, type: git checkout -b "BRANCH_NAME". And pushing changes into your branch, not master, is much more safer. 
-
-#for ones who don't know, you must press return key(Enter) to run command in terminal.
+	2. in terminal(Windows: Powershell or cmd), type: "git clone https://github.com/sus-unn/bl2d"
+	3. if you don't know anything about git, please google 'git' and learn about it.
