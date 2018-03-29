@@ -58,17 +58,20 @@ Recommanded:
 	
 #how to use:
 
+	(0. This is alpha version and add-on is not ready yet. Adding add-on in user preference will do nothing. )
+	
 	1. install blender 2.79 or later versions. ("AT LEAST 2.79, template or script might not work in earlier versions")
 	
 	2. download from https://github.com/sus-unn/bl2d as zip file, or in terminal: "git clone https://github.com/sus-unn/bl2d.git"
 	
-	3. DONNOT UNZIP ZIP FILE. If you've downloaded through git client, zip all files in one .zip file.
+	3. DONNOT DELETE ZIP FILE. If you've downloaded through git client, make copy of all files in one .zip file.
 	
 	4. In Blender User Preferences menu: install Add-on from zip file
 	
-	5. Open "template.blend"
+	5. If you downloaded directly, unzip and open "template.blend".
 	
 	6. 'Save as' or copy template file in directory\name you want. You must not edit template file.
+	
 	
 
 
