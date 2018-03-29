@@ -9,9 +9,9 @@
 
 Basic Info:
 	
-	Anime Drawing In Blender
+	Animation Drawing In Blender
 	
-	Version 0.01
+	Version 0.01 alpha
 	
 	Creator : Sus-susnn
 	
