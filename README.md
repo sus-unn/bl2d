@@ -73,6 +73,19 @@ Recommanded:
 	6. 'Save as' or copy template file in directory\name you want. You must not edit template file.
 	
 	
+#incomplete features:
+	
+	1. 'Printing' script requires user to turn 3dView Panel to 'Camera view' mode.
+	
+	2. Time sheet is not ready.
+	
+	3. Automated layout text creation is not complete.
+	
+	4. It is not decided how to mark in-between for timesheet.
+	
+	5. Add-On file is practically blank.
+	
+	
 
 
 
