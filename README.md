@@ -123,6 +123,8 @@ Tips:
 	Scene "TimeSheet" is scene for time sheet(or, X-Sheet).
 	Scene "Preset_Lib" is scene containing preset objects. (Like follow, 中割り indicators)
 	
+	Some objects are unselectable or hidden by default, because they might be distractive. 
+	
 For Developers:
 
 #Please contribute
