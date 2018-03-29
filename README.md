@@ -1,7 +1,7 @@
 #sus_bl2d
 #Utilities helps making 2d animation in blender
 
-#PLEASE DONNOT TYPE ANY NON-ENGLISH CHARACTERS IN 'bl2d.py'
+#PLEASE DONNOT TYPE ANY NON-ENGLISH CHARACTERS IN SCRIPTS including 'bl2d.py'
 #DONNOT CHANGE ANY TEMPLATE OBJECT NAMES. IT WILL CAUSE FATAL ERROR.
 
 #This add-on and its features are yet incomplete.
