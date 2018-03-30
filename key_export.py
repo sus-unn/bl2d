@@ -27,8 +27,15 @@ bpy.context.scene.camera = bpy.data.objects['Camera_WholeSheet']
 bpy.data.scenes['Main'].render.resolution_x = bpy.data.objects['Sheet'].scale[0] * dpi * inch_ratio * 100
 bpy.data.scenes['Main'].render.resolution_y = bpy.data.objects['Sheet'].scale[1] * dpi * inch_ratio * 100
 
+'''
+#check if frame is empty
+for i in bpy.context.scene.grease_pencil.layers.active.frames:
+	if not i.strokes.items():
+		print("empty")
+	else :
+		print("not empty")
 
-
+'''
 def key_export(gp_layer_name):
     bpy.context.scene.frame_set(bpy.data.scenes['Main'].frame_start)
     
