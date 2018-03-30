@@ -1,6 +1,9 @@
 import bpy
 import os
 
+context_format = bpy.data.scenes['Main'].render.image_settings.file_format
+bpy.data.scenes['Main'].render.image_settings.file_format = 'PNG'
+
 key_jump_next = 0
 key_jump_prev = 1
 
@@ -57,9 +60,10 @@ for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers: #unhide all 
 
 
 
-#reset Camera
+#restore Camera
 bpy.context.scene.camera = current_cam
-#reset render settings
+#restore render settings
+bpy.data.scenes['Main'].render.image_settings.file_format = context_format
 bpy.data.scenes['Main'].render.resolution_x = current_render_width
 bpy.data.scenes['Main'].render.resolution_y = current_render_height 
 
