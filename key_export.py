@@ -28,20 +28,21 @@ bpy.data.scenes['Main'].render.resolution_x = bpy.data.objects['Sheet'].scale[0]
 bpy.data.scenes['Main'].render.resolution_y = bpy.data.objects['Sheet'].scale[1] * dpi * inch_ratio * 100
 
 def key_export(gp_layer_name):
-    bpy.context.scene.frame_set(bpy.data.scenes['Main'].frame_start)
+    bpy.context.scene.frame_set(bpy.data.scenes['Main'].frame_start-1)
     
     key_count_blend = 0
     key_count_sheet = 1
     
     while True:
-        bpy.data.scenes['Main'].render.filepath = fpath + fname + "_" + gp_layer_name + "_"
-        bpy.data.scenes['Main'].render.filepath += str(key_count)
-		if bpy.data.grease_pencil['GPencil_Main'].layers[gp_layer_name].frames[key_count_blend].strokes.items():
-			bpy.ops.render.opengl(animation=False, sequencer=False, write_still=True, view_context=True)
-			key_count_sheet += 1
-		key_count_blend += 1
         if bpy.ops.screen.keyframe_jump(key_jump_next) == {'CANCELLED'}:
             break
+        bpy.data.scenes['Main'].render.filepath = fpath + fname + "_" + gp_layer_name + "_"
+        bpy.data.scenes['Main'].render.filepath += str(key_count_sheet)
+        if bpy.data.grease_pencil['GPencil_Main'].layers[gp_layer_name].frames[key_count_blend].strokes.items():
+            bpy.ops.render.opengl(animation=False, sequencer=False, write_still=True, view_context=True)
+            key_count_sheet += 1
+        key_count_blend += 1
+        
         
 
 bpy.context.scene.frame_set(bpy.data.scenes['Main'].frame_start)
