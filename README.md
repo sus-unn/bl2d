@@ -132,3 +132,7 @@ For Developers:
 	1. install git
 	2. in terminal(Windows: Powershell or cmd), type: "git clone https://github.com/sus-unn/bl2d"
 	3. if you don't know anything about git, please google 'git' and learn about it.
+    4. Version => 'product number'.'feature  changes'.'minor changes'+TYPE:
+        for exampe, 0.004.014b (product number zero, 4 feature changes, 14 minor changes, beta)
+        a=alpha, b=beta, d=dev, u=unstable, r=release
+    5. Tag version in git. (but don't tag every little commits)

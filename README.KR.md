@@ -135,3 +135,8 @@ For Developers:
 	1. install git
 	2. in terminal(Windows: Powershell or cmd), type: "git clone https://github.com/sus-unn/bl2d"
 	3. if you don't know anything about git, please google 'git' and learn about it.
+    4. 버젼은 다음과 같이 관리됩니다:
+        '제품 번호'+'큰 변화'+'작은 변화'+'타입'
+        예를 들어 0.004.014b의 제품 번호는 0, 큰 변화는 네 번, 작은 변화는 14번 있었고 b는 베타를 의미합니다.
+        a=알파, b=베타, d=개발, u=불안정, r=배포판
+    5. 버젼은 커밋에 태그로 달아줍니다. 그러나, 너무 작은 수정까지 버젼을 변경하는것은 바람직하지 않다고 봅니다.
