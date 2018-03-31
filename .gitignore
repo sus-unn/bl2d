@@ -2,6 +2,7 @@
 
 #blender might create this temp file
 *.blend1 
+*.zip
 
 #don't know why, but it seems krita creates this temp file. 
 *.png~ 
