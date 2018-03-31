@@ -8,7 +8,7 @@ bl_info = { \
     'name': 'BL2D: Blender 2D Animation toolkit for digital hand-drawn animation (Alpha)',
     'author': 'Susunn',
     'version': (0, 1, 2),
-    'blender': (2, 7, 9),
+    'blender': (2, 79, 0),
     'location': 'Toolshelf > Tools',
     'description': 'Make 2D animation in blender. This add-on and template file is yet uncomplete.',
     'tracker_url': 'https://github.com/sus-unn/bl2d',
