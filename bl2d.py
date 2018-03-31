@@ -56,7 +56,7 @@ class BL2dPanel(bpy.types.Panel):
 	
 	
 
-	
+'''	
 class SetTimeText(bpy.types.Operator):
 
 	bl_label = "SetTimeText"
@@ -66,7 +66,7 @@ class SetTimeText(bpy.types.Operator):
 		bpy.data.objects["Text_Time_Frame"].data.body = str(bpy.data.scenes["Main"].frame_end%bpy.data.scenes['Main'].render.fps)
 		return {'RUNNING_MODAL'}
 
-
+'''
 bl2d_icons = None
 
 	
