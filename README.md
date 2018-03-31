@@ -11,7 +11,7 @@ Basic Info:
 	
 	Animation Drawing In Blender
 	
-	Version 0.01.6 alpha
+	Version 0.004.006a alpha
 	
 	Creator : Sus-susnn
 	
