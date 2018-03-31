@@ -2,6 +2,7 @@
 import os
 import bpy
 import bpy.utils.previews
+from bpy.types import Menu, Panel, UIList
 
 
 bl_info = { \
@@ -16,17 +17,17 @@ bl_info = { \
     'support': 'COMMUNITY',
     'category': 'Animation'}
 	
+class View3DPanel:
+    bl_space_type = 'VIEW_3D'
+    bl_region_type = 'TOOLS'
 
 
-class BL2dPanel(bpy.types.Panel):
+class VIEW3D_PT_tools_bl2d(View3DPanel, Panel):
 	'''
 	bl2d panel class
 	'''
-	
+	bl_category = "BL2D"
 	bl_label = "BL2D"
-	bl_idname = "OBJECT_PT+BL2D"
-	bl_space_type = 'VIEW_3D'
-	bl_region_type = 'TOOLS'
 	bl_context = "objectmode"
 	
 	def draw(self, context):
