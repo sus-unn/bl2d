@@ -43,6 +43,18 @@ class VIEW3D_PT_tools_bl2d_info(View3DPanel, Panel):
         
         col=layout.column()
         
+        
+class VIEW3D_PT_tools_bl2d_options(View3DPanel, Panel):
+    bl_category = "BL2D"
+    bl_label = "Options"
+    bl_context = "objectmode"
+    
+    def draw(self, context):
+        layout = self.layout
+        
+        col = layout.column()        
+
+
 class VIEW3D_PT_tools_bl2d_print(View3DPanel, Panel):
     bl_category = "BL2D"
     bl_label = "Print"
@@ -51,8 +63,17 @@ class VIEW3D_PT_tools_bl2d_print(View3DPanel, Panel):
     def draw(self, context):
         layout = self.layout
         
-        col = layout.column()
+        col = layout.column()     
+        
+class VIEW3D_PT_tools_bl2d_indicators(View3DPanel, Panel):
+    bl_category = "BL2D"
+    bl_label = "Indicators"
+    bl_context = "objectmode"
     
+    def draw(self, context):
+        layout = self.layout
+        
+        col = layout.column()        
 
 '''    
 class SetTimeText(bpy.types.Operator):
