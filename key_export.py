@@ -1,8 +1,7 @@
 import bpy
 import os
 
-context_format = bpy.data.scenes['Main'].render.image_settings.file_format
-bpy.data.scenes['Main'].render.image_settings.file_format = 'PNG'
+#currently this variables are pre-defined
 
 key_jump_next = 0
 key_jump_prev = 1
@@ -11,12 +10,20 @@ inch_ratio = 1/25.399
 
 dpi = 300
 
+fname = "image"
+
+#backups
+current_format = bpy.data.scenes['Main'].render.image_settings.file_format
 current_cam = bpy.data.objects['Camera_Main']
 #current_cam = bpy.context.scene.camera #this one is alternative
 current_render_width = bpy.data.scenes['Main'].render.resolution_x 
 current_render_height = bpy.data.scenes['Main'].render.resolution_y
-fpath = bpy.data.scenes['Main'].render.filepath
-fname = "image"
+
+#export settings
+bpy.data.scenes['Main'].render.image_settings.file_format = 'PNG'
+fpath = bpy.data.scenes['Main'].render.filepath 
+xpath = fpath #export directory
+
 
 #Set Print Camera
 
@@ -65,7 +72,7 @@ for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers: #unhide all 
 #restore Camera
 bpy.context.scene.camera = current_cam
 #restore render settings
-bpy.data.scenes['Main'].render.image_settings.file_format = context_format
+bpy.data.scenes['Main'].render.image_settings.file_format = current_format
 bpy.data.scenes['Main'].render.resolution_x = current_render_width
 bpy.data.scenes['Main'].render.resolution_y = current_render_height 
 
