@@ -43,13 +43,15 @@ class VIEW3D_PT_tools_bl2d_info(View3DPanel, Panel):
         
         col=layout.column()
         
-class VIEW3D_PT_tools_bl2d_info(View3DPanel, Panel):
-    '''
-    bl2d panel class
-    '''
+class VIEW3D_PT_tools_bl2d_print(View3DPanel, Panel):
     bl_category = "BL2D"
-    bl_label = "BL2D"
+    bl_label = "Print"
     bl_context = "objectmode"
+    
+    def draw(self, context):
+        layout = self.layout
+        
+        col = layout.column()
     
 
 '''    
