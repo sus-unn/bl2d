@@ -43,7 +43,6 @@ class VIEW3D_PT_tools_bl2d(View3DPanel, Panel):
 		
 		col=layout.column()
 		
-		col=box.column()
 	
 	
 
