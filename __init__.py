@@ -35,25 +35,15 @@ class VIEW3D_PT_tools_bl2d(View3DPanel, Panel):
 		
 		layout = self.layout
 		
-		row = layout.row()
-		row.label(text = "BL2D", icon_value = bl2d_icons["custom_icon"].icon_id)
+		col = layout.column()
+		col.label(text = "BL2D", icon_value = bl2d_icons["custom_icon"].icon_id)
 		
 		box = layout.box()
 		box.label("Info")
 		
-		row=box.row()
+		col=layout.column()
 		
-		row=layout.row()
-		box=layout.box()
-		box.label("Print")
-		
-		row=box.row()
-		
-		row=layout.row()
-		box=layout.box()
-		box.label("Indicators")
-		
-		row=box.row()
+		col=box.column()
 	
 	
 
