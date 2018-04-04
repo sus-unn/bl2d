@@ -10,7 +10,7 @@ What is BL2D?
 
 Animation Drawing In Blender
 	
-Current Version is 0.005.002d alpha
+Current Version is 0.005.002a alpha
 
 
 Before you use
