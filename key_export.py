@@ -28,7 +28,7 @@ xpath = fpath #export directory
 
 scene.render.image_settings.color_mode = 'RGB'
 scene.render.image_settings.color_depth = '8'
-scene.render.iimage_settings.compression = 15
+scene.render.iimage_settings.compression = '15'
 
 
 #Set Print Camera
