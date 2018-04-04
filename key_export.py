@@ -17,7 +17,7 @@ scene = bpy.data.scenes['Main']
 #backups
 current_format = scene.render.image_settings.file_format
 current_cam = bpy.data.objects['Camera_Main']
-#current_cam = bpy.context.scene.camera #this one is alternative
+#current_cam = scene.camera #this one is alternative
 current_render_width = scene.render.resolution_x 
 current_render_height = scene.render.resolution_y
 
@@ -33,7 +33,7 @@ scene.render.image_settings.compression = 15
 
 #Set Print Camera
 
-bpy.context.scene.camera = bpy.data.objects['Camera_WholeSheet']
+scene.camera = bpy.data.objects['Camera_WholeSheet']
  
 #Set Print Sheet
 
@@ -41,7 +41,7 @@ scene.render.resolution_x = bpy.data.objects['Sheet'].scale[0] * dpi * inch_rati
 scene.render.resolution_y = bpy.data.objects['Sheet'].scale[1] * dpi * inch_ratio * 100
 
 def key_export(gp_layer_name):
-    bpy.context.scene.frame_set(scene.frame_start-1)
+    scene.frame_set(scene.frame_start-1)
     
     key_count_blend = 0
     key_count_sheet = 1
@@ -58,7 +58,7 @@ def key_export(gp_layer_name):
         
         
 
-bpy.context.scene.frame_set(scene.frame_start)
+scene.frame_set(scene.frame_start)
 
 #print all cels here
 
@@ -76,11 +76,11 @@ for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers: #unhide all 
 
 
 #restore Camera
-bpy.context.scene.camera = current_cam
+scene.camera = current_cam
 #restore render settings
 scene.render.image_settings.file_format = current_format
 scene.render.resolution_x = current_render_width
 scene.render.resolution_y = current_render_height 
 
 scene.render.filepath = fpath
-bpy.context.scene.frame_set(scene.frame_start)
+scene.frame_set(scene.frame_start)
