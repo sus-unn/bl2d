@@ -31,7 +31,7 @@ Installation
   
   2 Open Blender
   
-  3 File > User Preferences > Add-ons > Install Add-on from file > select downloaded zip file
+  3 File > User Preferences > Add-ons > Install Add-on from file > open downloaded zip file
   
   4 Enable Add-on
 
