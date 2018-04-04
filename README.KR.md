@@ -30,7 +30,7 @@ BL2D로 Blender에서 2D 애니메이션을 만드는 것이 쉬워집니다.
 
   2 블렌더를 실행합니다.
 
-  3 File > User Preferences > Add-ons > Install Add-on from file 를 누르고 Bl2D zip 파일을 선택합니다.
+  3 File > User Preferences > Add-ons > Install Add-on from file 를 누르고 Bl2D zip 파일을 니다.
 
   4 애드온을 활성화합니다.
 
