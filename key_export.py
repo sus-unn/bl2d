@@ -26,7 +26,7 @@ scene.render.image_settings.file_format = 'PNG'
 fpath = scene.render.filepath 
 xpath = fpath #export directory
 
-scene.render.image_settings.color_mode = RGB
+scene.render.image_settings.color_mode = 'RGB'
 scene.render.image_settings.color_depth = 8
 scene.render.iimage_settings.compression = 15
 
