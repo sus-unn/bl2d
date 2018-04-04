@@ -125,6 +125,9 @@ Tips:
 	
 	Some objects are unselectable or hidden by default, because they might be distractive. 
 	
+	If you installed new version, and same UI panel is being repeated, or old version's panel is not being removed, press F8. 
+	If that doesn't work, make an Issue on Github page or, mail me.
+	
 For Developers:
 
 #Please contribute
