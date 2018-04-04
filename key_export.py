@@ -13,6 +13,7 @@ dpi = 300
 fname = "image"
 
 scene = bpy.data.scenes['Main']
+gp_layers = bpy.data.grease_pencil['GPencil_Main'].layers
 
 #backups
 current_format = scene.render.image_settings.file_format
@@ -51,7 +52,7 @@ def key_export(gp_layer_name):
             break
         scene.render.filepath = fpath + fname + "_" + gp_layer_name + "_"
         scene.render.filepath += str(key_count_sheet)
-        if bpy.data.grease_pencil['GPencil_Main'].layers[gp_layer_name].frames[key_count_blend].strokes.items():
+        if gp_layers[gp_layer_name].frames[key_count_blend].strokes.items():
             bpy.ops.render.opengl(animation=False, sequencer=False, write_still=True, view_context=True)
             key_count_sheet += 1
         key_count_blend += 1
@@ -62,15 +63,15 @@ scene.frame_set(scene.frame_start)
 
 #print all cels here
 
-for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers: #hide all layers
+for each_gp_layer in gp_layers: #hide all layers
     each_gp_layer.hide = True
 
-for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers:#print each layers
+for each_gp_layer in gp_layers:#print each layers
     each_gp_layer.hide = False #unhide current layer and...
     key_export(each_gp_layer.info)
     each_gp_layer.hide = True #...hide current layer again.
 
-for each_gp_layer in bpy.data.grease_pencil['GPencil_Main'].layers: #unhide all GPencil Layers
+for each_gp_layer in gp_layers: #unhide all GPencil Layers
     each_gp_layer.hide = False
 
 
