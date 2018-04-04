@@ -22,6 +22,10 @@ current_cam = bpy.data.objects['Camera_Main']
 current_render_width = scene.render.resolution_x 
 current_render_height = scene.render.resolution_y
 
+current_color_mode = scene.render.image_settings.color_mode
+current_color_depth = scene.render.image_settings.color_depth
+current_compression = scene.render.image_settings.compression
+
 #export settings
 scene.render.image_settings.file_format = 'PNG'
 fpath = scene.render.filepath 
@@ -82,6 +86,10 @@ scene.camera = current_cam
 scene.render.image_settings.file_format = current_format
 scene.render.resolution_x = current_render_width
 scene.render.resolution_y = current_render_height 
+
+scene.render.image_settings.color_mode = current_color_mode
+scene.render.image_settings.color_depth = current_color_depth
+scene.render.image_settings.compression = current_compression
 
 scene.render.filepath = fpath
 scene.frame_set(scene.frame_start)
