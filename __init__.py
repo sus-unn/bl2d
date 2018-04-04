@@ -23,9 +23,7 @@ class View3DPanel:
 
 
 class VIEW3D_PT_tools_bl2d_info(View3DPanel, Panel):
-    '''
-    bl2d panel class
-    '''
+
     bl_category = "BL2D"
     bl_label = "BL2D"
     bl_context = "objectmode"
@@ -44,9 +42,10 @@ class VIEW3D_PT_tools_bl2d_info(View3DPanel, Panel):
         col=layout.column()
         
         
-class VIEW3D_PT_tools_bl2d_options(View3DPanel, Panel):
+class VIEW3D_PT_tools_bl2d_output(View3DPanel, Panel):
+
     bl_category = "BL2D"
-    bl_label = "Options"
+    bl_label = "Output"
     bl_context = "objectmode"
     
     def draw(self, context):
@@ -55,9 +54,10 @@ class VIEW3D_PT_tools_bl2d_options(View3DPanel, Panel):
         col = layout.column()        
 
 
-class VIEW3D_PT_tools_bl2d_print(View3DPanel, Panel):
+class VIEW3D_PT_tools_bl2d_cel(View3DPanel, Panel):
+
     bl_category = "BL2D"
-    bl_label = "Print"
+    bl_label = "Cel"
     bl_context = "objectmode"
     
     def draw(self, context):
@@ -66,6 +66,7 @@ class VIEW3D_PT_tools_bl2d_print(View3DPanel, Panel):
         col = layout.column()     
         
 class VIEW3D_PT_tools_bl2d_indicators(View3DPanel, Panel):
+
     bl_category = "BL2D"
     bl_label = "Indicators"
     bl_context = "objectmode"
@@ -74,6 +75,17 @@ class VIEW3D_PT_tools_bl2d_indicators(View3DPanel, Panel):
         layout = self.layout
         
         col = layout.column()        
+        
+class VIEW3D_PT_tools_bl2d_book(View3DPanel, Panel):
+
+    bl_category = "BL2D"
+    bl_label = "Book"
+    bl_context = "objectmode"
+    
+    def draw(self, context):
+        layout = self.layout
+        
+        col = layout.column()     
 
 '''    
 class SetTimeText(bpy.types.Operator):
