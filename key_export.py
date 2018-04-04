@@ -62,9 +62,9 @@ def key_export(gp_layer_name):
         
         if(key_count_sheet < 10):
             key_count_str = "000" + key_count_str
-        if(key_count_sheet < 100):
+        if(10 <= key_count_sheet < 100):
             key_count_str = "00" + key_count_str
-        if(key_count_sheet < 1000):
+        if(100 <= key_count_sheet < 1000):
             key_count_str = "0" + key_count_str
         scene.render.filepath = fpath + fname + "_" + gp_layer_name + "_"
         scene.render.filepath += str(key_count_str)
