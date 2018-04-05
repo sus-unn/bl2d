@@ -6,7 +6,7 @@ from bpy.types import Menu, Panel, UIList
 
 
 bl_info = { \
-    'name': 'BL2D: Blender 2D Animation toolkit for digital hand-drawn animation (alpha)',
+    'name': 'BL2D: Blender 2D Animation toolkit for digital hand-drawn animation (ui-dev branch)',
     'author': 'Susunn',
     'version': (0, 5, 2),
     'blender': (2, 79, 0),
