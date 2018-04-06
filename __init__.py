@@ -18,10 +18,12 @@ if "bpy" in locals():
     import importlib
     importlib.reload(bl2d)
     importlib.reload(key_export)
+    importlib.reload(preview_full)
     
 else:
     from . import bl2d
     from . import key_export
+    from . import preview_full
     
 import os
 import bpy
@@ -68,6 +70,7 @@ class VIEW3D_PT_tools_bl2d_output(View3DPanel, Panel):
         col = layout.column()        
         
         layout.operator("export.keys", text = "Export keyframes")
+        layout.operator("export.preview_full", text = "Export full sheet preview")
 
 class VIEW3D_PT_tools_bl2d_cel(View3DPanel, Panel):
 
