@@ -20,13 +20,13 @@ if "bpy" in locals():
     importlib.reload(key_export)
     
 else:
-    import os
-    import bpy
-    import bpy.utils.previews
-    from bpy.types import Menu, Panel, UIList
-
     from . import bl2d
     from . import key_export
+    
+import os
+import bpy
+import bpy.utils.previews
+from bpy.types import Menu, Panel, UIList
 
 class View3DPanel:
     bl_space_type = 'VIEW_3D'
