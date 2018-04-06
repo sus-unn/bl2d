@@ -7,8 +7,6 @@ inch_ratio = 1/25.399
 key_jump_next = 0
 key_jump_prev = 1
 
-fpath = " "
-fname = " "
 
 def key_export(gp_layer_name):
 
@@ -32,7 +30,7 @@ def key_export(gp_layer_name):
             key_count_str = "00" + key_count_str
         if(100 <= key_count_sheet < 1000):
             key_count_str = "0" + key_count_str
-        bl2d.scene.render.filepath = fpath + fname + "_" + gp_layer_name + "_"
+        bl2d.scene.render.filepath = bl2d.fpath + bl2d.fname + "_" + gp_layer_name + "_"
         bl2d.scene.render.filepath += str(key_count_str)
         if bl2d.gp_layers[gp_layer_name].frames[key_count_blend].strokes.items():
             bpy.ops.render.opengl(animation=False, sequencer=False, write_still=True, view_context=True)
@@ -54,7 +52,7 @@ class ExportKey(bpy.types.Operator):
 
         dpi = 300
         
-        fname = "image"
+        bl2d.fname = "image"
         
         bl2d.scene = bpy.data.scenes['Main']
         bl2d.gp_layers = bpy.data.grease_pencil['GPencil_Main'].layers
@@ -72,8 +70,8 @@ class ExportKey(bpy.types.Operator):
         
         #export settings
         bl2d.scene.render.image_settings.file_format = 'PNG'
-        fpath = bl2d.scene.render.filepath 
-        xpath = fpath #export directory
+        bl2d.fpath = bl2d.scene.render.filepath 
+        xpath = bl2d.fpath #export directory
         
         bl2d.scene.render.image_settings.color_mode = 'RGB'
         bl2d.scene.render.image_settings.color_depth = '8'
@@ -117,7 +115,7 @@ class ExportKey(bpy.types.Operator):
         bl2d.scene.render.image_settings.color_depth = current_color_depth
         bl2d.scene.render.image_settings.compression = current_compression
         
-        bl2d.scene.render.filepath = fpath
+        bl2d.scene.render.filepath = bl2d.fpath
         bl2d.scene.frame_set(bl2d.scene.frame_start)
         return {'FINISHED'}
 
