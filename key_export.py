@@ -3,10 +3,17 @@ import os
 from . import bl2d
 
 inch_ratio = 1/25.399
+
 key_jump_next = 0
 key_jump_prev = 1
 
+scene = " "
+gp_layers = " "
+fpath = " "
+fname = " "
+
 def key_export(gp_layer_name):
+
             scene.frame_set(scene.frame_start-1)
             
             key_count_blend = 0
