@@ -2,7 +2,7 @@ import bpy
 import os
 from . import bl2d
 
-inch_ratio = 1/25.399
+
 
 key_jump_next = 0
 key_jump_prev = 1
@@ -80,8 +80,8 @@ class ExportKey(bpy.types.Operator):
         
         #Set Print Sheet
         
-        bl2d.scene.render.resolution_x = bpy.data.objects['Sheet'].scale[0] * bl2d.print_dpi * inch_ratio * 100
-        bl2d.scene.render.resolution_y = bpy.data.objects['Sheet'].scale[1] * bl2d.print_dpi * inch_ratio * 100
+        bl2d.scene.render.resolution_x = bpy.data.objects['Sheet'].scale[0] * bl2d.print_dpi * bl2d.inch_ratio * 100
+        bl2d.scene.render.resolution_y = bpy.data.objects['Sheet'].scale[1] * bl2d.print_dpi * bl2d.inch_ratio * 100
         
         bl2d.scene.frame_set(bl2d.scene.frame_start)
         
