@@ -1,5 +1,6 @@
 import bpy
 import os
+from . import bl2d
 
 inch_ratio = 1/25.399
 
