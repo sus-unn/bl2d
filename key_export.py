@@ -2,6 +2,10 @@ import bpy
 import os
 from . import bl2d
 
+inch_ratio = 1/25.399
+key_jump_next = 0
+key_jump_prev = 1
+
 def key_export(gp_layer_name):
             scene.frame_set(scene.frame_start-1)
             
@@ -42,11 +46,6 @@ class ExportKey(bpy.types.Operator):
     def execute(self, context):
         #currently this variables are pre-defined
 
-        key_jump_next = 0
-        key_jump_prev = 1
-        
-        inch_ratio = 1/25.399
-        
         dpi = 300
         
         fname = "image"
