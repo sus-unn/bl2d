@@ -49,8 +49,6 @@ class ExportKey(bpy.types.Operator):
         
     def execute(self, context):
         #currently this variables are pre-defined
-
-        dpi = 300
         
         bl2d.scene = bpy.data.scenes['Main']
         bl2d.gp_layers = bpy.data.grease_pencil['GPencil_Main'].layers
@@ -82,8 +80,8 @@ class ExportKey(bpy.types.Operator):
         
         #Set Print Sheet
         
-        bl2d.scene.render.resolution_x = bpy.data.objects['Sheet'].scale[0] * dpi * inch_ratio * 100
-        bl2d.scene.render.resolution_y = bpy.data.objects['Sheet'].scale[1] * dpi * inch_ratio * 100
+        bl2d.scene.render.resolution_x = bpy.data.objects['Sheet'].scale[0] * bl2d.print_dpi * inch_ratio * 100
+        bl2d.scene.render.resolution_y = bpy.data.objects['Sheet'].scale[1] * bl2d.print_dpi * inch_ratio * 100
         
         bl2d.scene.frame_set(bl2d.scene.frame_start)
         
