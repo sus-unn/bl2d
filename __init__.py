@@ -5,6 +5,7 @@ import bpy.utils.previews
 from bpy.types import Menu, Panel, UIList
 
 from . import bl2d
+from . import key_export
 
 
 bl_info = { \
