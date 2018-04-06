@@ -56,7 +56,7 @@ class ExportKey(bpy.types.Operator):
         
         fname = "image"
         
-        bl2d.scene = bpy.data.bl2d.scenes['Main']
+        bl2d.scene = bpy.data.scenes['Main']
         bl2d.gp_layers = bpy.data.grease_pencil['GPencil_Main'].layers
         
         #backups
