@@ -50,7 +50,7 @@ class VIEW3D_PT_tools_bl2d_info(View3DPanel, Panel):
         box = layout.box()
         box.label("Info")
         
-        box.label("Version 0.005.002a")
+        box.label("Version 0.006.000d")
         box.label("ui_dev branch")
         
         col=layout.column()
