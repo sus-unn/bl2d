@@ -45,6 +45,7 @@ class ExportKey(bpy.types.Operator):
     
     bl_idname = "export.keys"
     bl_label = "Export keyframes"
+    bl_description = "Export keyframe sheets at once. "
     
     @classmethod
     def poll(cls, context):
