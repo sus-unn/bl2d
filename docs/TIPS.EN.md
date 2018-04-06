@@ -62,7 +62,7 @@ Export
 
 To render preview animation, use OpenGL Render Animation.
 
-To export keyframe sheets, use 'key_export.py' which is also included in template's text editor.
+In BL2D tab > Output panel: You can export keyframes or export full size preview animation.
 
 
 Working Spaces
