@@ -3,9 +3,9 @@
 
 
 bl_info = { \
-    'name': 'BL2D: Blender 2D Animation toolkit for digital hand-drawn animation (ui-dev branch)',
+    'name': 'BL2D: Blender 2D Animation toolkit for digital hand-drawn animation (dev)',
     'author': 'Susunn',
-    'version': (0, 5, 2),
+    'version': (0, 6, 1),
     'blender': (2, 79, 0),
     'location': 'Toolshelf > Tools',
     'description': 'Make 2D animation in blender. This add-on and template file is yet uncomplete.',
