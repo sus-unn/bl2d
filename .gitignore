@@ -6,3 +6,5 @@
 
 #don't know why, but it seems krita creates this temp file. 
 *.png~ 
+
+__pycache__/
