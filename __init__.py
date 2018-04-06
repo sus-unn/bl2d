@@ -3,7 +3,7 @@
 
 
 bl_info = { \
-    'name': 'BL2D: Blender 2D Animation toolkit for digital hand-drawn animation (dev)',
+    'name': 'BL2D: Blender 2D Animation toolkit for digital hand-drawn animation (alpha)',
     'author': 'Susunn',
     'version': (0, 6, 1),
     'blender': (2, 79, 0),
