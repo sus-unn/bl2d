@@ -7,8 +7,8 @@ inch_ratio = 1/25.399
 key_jump_next = 0
 key_jump_prev = 1
 
-scene = " "
-gp_layers = " "
+scene = bpy.context.scene
+gp_layers = bpy.context.grease_pencil.layers
 fpath = " "
 fname = " "
 
