@@ -52,8 +52,6 @@ class ExportKey(bpy.types.Operator):
 
         dpi = 300
         
-        bl2d.fname = "image"
-        
         bl2d.scene = bpy.data.scenes['Main']
         bl2d.gp_layers = bpy.data.grease_pencil['GPencil_Main'].layers
         

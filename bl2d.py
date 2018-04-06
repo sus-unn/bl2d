@@ -5,4 +5,4 @@ scene = list() #empty
 gp_layers = list() #empty
 
 fpath = " "
-fname = " "
+fname = "Image"
