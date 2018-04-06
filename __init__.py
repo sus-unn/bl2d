@@ -57,6 +57,8 @@ class VIEW3D_PT_tools_bl2d_output(View3DPanel, Panel):
     def draw(self, context):
         layout = self.layout
         
+        layout.operator(key_export.ExportKey.bl_idname);
+        
         col = layout.column()        
 
 
