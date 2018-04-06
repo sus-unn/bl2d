@@ -6,3 +6,6 @@ gp_layers = list() #empty
 
 fpath = " "
 fname = "Image"
+
+scan_dpi = 128
+print_dpi = 300
