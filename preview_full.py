@@ -49,3 +49,5 @@ class preview_full_export(bpy.types.Operator):
         
         bl2d.scene.render.filepath = fpath
         bpy.context.scene.frame_set(bl2d.scene.frame_start)
+        
+        return {'FINISHED'}
