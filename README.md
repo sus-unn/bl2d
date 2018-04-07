@@ -8,9 +8,10 @@ This add-on and its features are incomplete.
 What is BL2D?
 -------------
 
-Animation Drawing In Blender
-	
-Current Version is 0.006.001a alpha
+BL2D helps integrating blender into 2d animation -especially Japanese- pipeline by providing add-on and template.
+In BL2D, you can make Layout/Genga. (Key animation) (We are considering supporting later part of the pipeline after blender 2.8)
+
+latest stable release is 0.006.001a 
 
 
 Before you use
