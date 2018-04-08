@@ -62,3 +62,20 @@ BL2D의 템플릿은 Scene으로 작화, 타임시트, '미리 정의된 오브�
 
 오브젝트 구성
 ---------
+
+UI
+--
+
+애드온을 설치하면 'BL2D'라는 탭이 좌측 툴바에 생깁니다.
+
+이 탭에는 'Info' ,'Output', 'Cel', 'Indicators', 'Book'라는 패널이 있습니다.
+
+현재는 info, output 패널만이 기능이 있습니다.
+
+Info 패널에는 BL2D에 대한 정보가 있습니다.
+
+Output 패널에는 'Export Keyframes', 'Export full sheet preview'라는 두 버튼이 있습니다.
+
+'Export Keyframes'를 누르면 현재 컷의 원화를 모두 출력합니다.
+
+'Export full sheet preview'를 클릭하면 현재 컷의 전체 용지 프리뷰를 출력합니다.
