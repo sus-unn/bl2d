@@ -17,12 +17,12 @@ bl_info = { \
 if "bpy" in locals():
     import importlib
     importlib.reload(bl2d)
-    importlib.reload(key_export_all)
+    importlib.reload(key_export)
     importlib.reload(preview_full)
     
 else:
     from . import bl2d
-    from . import key_export_all
+    from . import key_export
     from . import preview_full
     
 import os
