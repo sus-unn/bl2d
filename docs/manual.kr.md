@@ -72,25 +72,27 @@ BL2D의 템플릿은 Scene으로 작화, 타임시트, '미리 정의된 오브�
 카메라
 -----
 
-'Main' 씬에는 세 개의 카메라가 있습니다. Camera_Main, Camera_Scan_Frame, Camera_WholeSheet 가 그것입니다.
+'Main' 씬에는 세 개의 카메라가 있습니다. 'Camera_Main', 'Camera_Scan_Frame', 'Camera_WholeSheet' 가 그것입니다.
 
-Camera_Main은 기본적인 촬영 카메라입니다. 이 카메라의 경계선은 촤종 화면의 경계선이고, 촬영프레임과 같습니다.
+'Camera_Mai'n은 기본적인 촬영 카메라입니다. 이 카메라의 경계선은 촤종 화면의 경계선이고, 촬영프레임과 같습니다.
 
-Camera_Scan_Frame은 스캔프레임에 대응하는 카메라입니다. 현재는 딱히 필요없어 보이지만, 블렌더내에서 동화를 만들고 그것을 출력해 타 프로그램에서 채색을 하는 상황이 생길수도 있어 대응하기 위해 만들었습니다.
+'Camera_Scan_Frame'은 스캔프레임에 대응하는 카메라입니다. 
 
-Camera_WholeSheet는 전체 용지를 촬영하는 카메라입니다. 원화출력을 할 때에 사용됩니다.
+현재는 딱히 필요없어 보이지만, 블렌더내에서 동화를 만들고 그것을 출력해 타 프로그램에서 채색을 하는 상황이 생길수도 있어 대응하기 위해 만들었습니다.
+
+'Camera_WholeSheet'는 전체 용지를 촬영하는 카메라입니다. 원화출력을 할 때에 사용됩니다.
 
 세 카메라는 모두 숨겨져 있고, 기본적으로 선택이 불가능합니다. 
 
-대신, Camera_Main과 Camera_Scan_Frame은 Camera_2dPanTBTU를 Parent로 하고 있어, Camera_2dPanTBTU를 움직이면 같이 움직입니다.
+대신, 'Camera_Main'과 'Camera_Scan_Frame'은 'Camera_2dPanTBTU'를 Parent로 하고 있어, 'Camera_2dPanTBTU'를 움직이면 같이 움직입니다.
 
-Camera_2dPanTBTU를 이용해 X, Y 방향으로 PAN을 해거나 Z방향으로 TU, TB이 가능합니다.
+'Camera_2dPanTBTU'를 이용해 X, Y 방향으로 PAN을 해거나 Z방향으로 TU, TB이 가능합니다.
 
-Camera_WholeSheet는 용지 오브젝트 'Sheet'를 Parent 오브젝트로 삼고 있고, 용지 크기가 바뀌거나 위치가 바뀔 때마다 자동으로 대응합니다.
+'Camera_WholeShee'는 용지 오브젝트 'Sheet'를 Parent 오브젝트로 삼고 있고, 용지 크기가 바뀌거나 위치가 바뀔 때마다 자동으로 대응합니다.
 
 또한, 세 카메라는 기본적으로 Orthographic 카메라인데, 이는 세 카메라 모두 투시/원근을 무시한다는 뜻입니다. 이는 정확성을 위해서 그런 것이고, 목적에 따라 Perspective 뷰로 바꿀 수 있습니다.
 
-그러나, Camera_WholeSheet는 용지만을 촬영하기 위함이기에 Perspective뷰로 바꾸는 것이 권장되지 않습니다.
+그러나, 'Camera_WholeSheet'는 용지만을 촬영하기 위함이기에 Perspective뷰로 바꾸는 것이 권장되지 않습니다.
 
 UI
 --
@@ -99,11 +101,11 @@ UI
 
 이 탭에는 'Info' ,'Output', 'Cel', 'Indicators', 'Book'라는 패널이 있습니다.
 
-현재는 info, output 패널만이 기능이 있습니다.
+현재는 'Info', 'Output' 패널만이 기능이 있습니다.
 
-Info 패널에는 BL2D에 대한 정보가 있습니다.
+'Info' 패널에는 BL2D에 대한 정보가 있습니다.
 
-Output 패널에는 'Export Keyframes', 'Export full sheet preview'라는 두 버튼이 있습니다.
+'Output' 패널에는 'Export Keyframes', 'Export full sheet preview'라는 두 버튼이 있습니다.
 
 'Export Keyframes'를 누르면 현재 컷의 원화를 모두 출력합니다.
 

@@ -51,7 +51,7 @@ ADD-ON DEPENDS ON THEM, SO IT WILL CAUSE FATAL ERROR TO YOUR SCENE.
 Scenes
 ------
 
-There are three scenes in template: "Main", "TimeSheet", "Preset_Lib"
+There are three scenes in template: 'Main', 'TimeSheet', 'Preset_Lib'
 
 'Main': Main working place. You will draw here.
 
@@ -87,11 +87,11 @@ But main and scanframe camera are parented to 'Camera_2dPanTBTU', so they will m
 
 Moving it in the X and Y, camera will PAN, in Z it will TB or TU.
 
-Camera_WholeSheet is parented to 'Sheet'. So even if the size of 'Sheet' changes, Camera_WholeSheet will change with it.
+'Camera_WholeSheet' is parented to 'Sheet'. So even if the size of 'Sheet' changes, 'Camera_WholeSheet' will change with it.
 
 Three cameras are orthographic by default, but you can change them to perspective.
 
-However, it is not suitable to change Camera_WholeSheet to perspective.
+However, it is not suitable to change 'Camera_WholeSheet' to perspective.
 
 UI
 ---
