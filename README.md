@@ -47,7 +47,7 @@ How to use
   
   3. Open template file and install bl2d add-on. 
   
-  4. For further information, read 'doc/TIPS.EN.md' or 'doc/TIPS.KR.md'
+  4. For further information, read 'docs/manual.en.md' or 'docs/manual.kr.md'
 
 
     

@@ -43,7 +43,7 @@ BL2D는 레이아웃/원화를 제작하도록 지원하고 있습니다. (blend
   
   3. 템플릿 파일을 열고 bl2d 애드온을 설치합니다.
 
-  4. 자세한 것은  'doc/TIPS.EN.md' 또는 'doc/TIPS.KR.md'에 설명되어 있습니다.
+  4. 자세한 것은  'docs/manual.en.md' 또는 'docs/manual.kr.md'에 설명되어 있습니다.
 
     
 Contact Developer(s)
