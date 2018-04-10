@@ -50,4 +50,4 @@ Contact Developer(s)
 -----------------
 ### Creator: Sus-unn. 
 
-### typ3ys.xz@gmail.com, https://twitter.com/SusunnK 
+### psusunn@gmail.com, https://twitter.com/SusunnK 
