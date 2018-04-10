@@ -22,7 +22,7 @@ BL2D 메뉴얼
 (Git에 대헤서 들어보신적이 없다면, 숙지하고 오십시요.)
 
 2. 작업경로의 터미널에서 다음과 같이 입력합니다:
-```
+```bash
 git clone --mirror https://github.com/sus-unn/bl2d.git bl2d/.git
 cd bl2d
 git config --unset core.bare

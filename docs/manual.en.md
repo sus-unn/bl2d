@@ -20,7 +20,7 @@ Installation(dev)
 1. First of all, you must have git client in your desktop, and you must know how to use git.
 
 2. In working directory, in terminal:
-```
+```bash
 git clone --mirror https://github.com/sus-unn/bl2d.git bl2d/.git
 cd bl2d
 git config --unset core.bare
