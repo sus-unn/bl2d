@@ -89,10 +89,10 @@ class VIEW3D_PT_tools_bl2d_output(View3DPanel, Panel):
         layout.operator("export.keys", text = "Export keyframes")
         layout.operator("export.preview_full", text = "Export full sheet preview")
 
-class VIEW3D_PT_tools_bl2d_cel(View3DPanel, Panel):
+class VIEW3D_PT_tools_bl2d_sheet(View3DPanel, Panel):
 
     bl_category = "BL2D"
-    bl_label = "Cel"
+    bl_label = "Sheet"
     bl_context = "objectmode"
     
     def draw(self, context):
