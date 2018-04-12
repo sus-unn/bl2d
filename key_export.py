@@ -60,18 +60,10 @@ class ExportKey(bpy.types.Operator):
         current_render_width = bl2d.scene.render.resolution_x 
         current_render_height = bl2d.scene.render.resolution_y
         
-        current_color_mode = bl2d.scene.render.image_settings.color_mode
-        current_color_depth = bl2d.scene.render.image_settings.color_depth
-        current_compression = bl2d.scene.render.image_settings.compression
-        
         #export settings
         bl2d.scene.render.image_settings.file_format = 'PNG'
         bl2d.fpath = bl2d.scene.render.filepath 
         xpath = bl2d.fpath #export directory
-        
-        bl2d.scene.render.image_settings.color_mode = 'RGB'
-        bl2d.scene.render.image_settings.color_depth = '8'
-        bl2d.scene.render.image_settings.compression = 15
         
         
         #Set Print Camera
@@ -106,10 +98,6 @@ class ExportKey(bpy.types.Operator):
         bl2d.scene.render.image_settings.file_format = current_format
         bl2d.scene.render.resolution_x = current_render_width
         bl2d.scene.render.resolution_y = current_render_height 
-        
-        bl2d.scene.render.image_settings.color_mode = current_color_mode
-        bl2d.scene.render.image_settings.color_depth = current_color_depth
-        bl2d.scene.render.image_settings.compression = current_compression
         
         bl2d.scene.render.filepath = bl2d.fpath
         bl2d.scene.frame_set(bl2d.scene.frame_start)
