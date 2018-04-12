@@ -81,6 +81,8 @@ class ExportKey(bpy.types.Operator):
             each_gp_layer.hide = True
         
         for each_gp_layer in bl2d.gp_layers:#print each layers
+            if(each_gp_layer.info[0] == "*"):
+                continue
             each_gp_layer.hide = False #unhide current layer and...
             key_export(each_gp_layer.info)
             each_gp_layer.hide = True #...hide current layer again.
