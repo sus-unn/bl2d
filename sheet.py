@@ -23,7 +23,17 @@ import bpy
 
 from . import bl2d
 
-def sheetlen(direction)
+def sheetlen(direction):
+    #backup cursor data
+    #backup selections
+    #edit mode
+    #select vertex 
+    #move 3d cursor
+    #move origin
+    #back to object mode
+    #change scale
+    #restore cursor
+    #restore selections
 
 # ##########################
 #       --------------
