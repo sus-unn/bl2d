@@ -48,6 +48,22 @@ DONNOT CHANGE ANY NAMES OF THE TEMPLATE'S OBJECTS OR DELETE THEM.
 
 ADD-ON DEPENDS ON THEM, SO IT WILL CAUSE FATAL ERROR TO YOUR SCENE.
 
+UI
+---
+
+Installing the add-on will make a tab named 'BL2D' in the toolbar.
+
+It has three panels, 'Info', 'Output', 'Cel', 'Indicators', 'Book'.
+
+Only 'Info' and 'Output' is working now.
+
+'Output' has two buttons; "Export Keyframes" and "Export full sheet preview".
+
+"Export Keyframes" will export all of the keyframes in the cut.
+
+"Export full sheet preview" will export the preview with border and aspect ratio iof 'Sheet'.
+
+
 Scenes
 ------
 
@@ -92,18 +108,3 @@ Moving it in the X and Y, camera will PAN, in Z it will TB or TU.
 Three cameras are orthographic by default, but you can change them to perspective.
 
 However, it is not suitable to change 'Camera_WholeSheet' to perspective.
-
-UI
----
-
-Installing the add-on will make a tab named 'BL2D' in the toolbar.
-
-It has three panels, 'Info', 'Output', 'Cel', 'Indicators', 'Book'.
-
-Only 'Info' and 'Output' is working now.
-
-'Output' has two buttons; "Export Keyframes" and "Export full sheet preview".
-
-"Export Keyframes" will export all of the keyframes in the cut.
-
-"Export full sheet preview" will export the preview with border and aspect ratio iof 'Sheet'.
