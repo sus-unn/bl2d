@@ -63,8 +63,6 @@ class ExportKey(bpy.types.Operator):
         #export settings
         bl2d.scene.render.image_settings.file_format = 'PNG'
         bl2d.fpath = bl2d.scene.render.filepath 
-        xpath = bl2d.fpath #export directory
-        
         
         #Set Print Camera
         
