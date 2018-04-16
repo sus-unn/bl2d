@@ -26,6 +26,7 @@ from . import bl2d
 def sheetlen(direction):
     #backup cursor data
     #backup selections
+    #backup origin
     #edit mode
     #select vertex 
     #move 3d cursor
@@ -34,6 +35,7 @@ def sheetlen(direction):
     #change scale
     #restore cursor
     #restore selections
+    #restore origin
 
 # ##########################
 #       ##############
