@@ -39,7 +39,7 @@ Installation
 How to use
 ---------
 
-  0. First of all, Use must be familiar with blender.
+  0. First of all, User must be familiar with blender.
   
   1. Copy 'template.blend' to your working directory.
   
