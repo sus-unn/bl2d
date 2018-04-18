@@ -112,3 +112,29 @@ BL2D의 템플릿은 Scene으로 작화, 타임시트, '미리 정의된 오브�
 
 그러나, 'Camera_WholeSheet'는 용지만을 촬영하기 위함이기에 Perspective뷰로 바꾸는 것이 권장되지 않습니다.
 
+<<<<<<< HEAD
+=======
+UI
+--
+
+애드온을 설치하면 'BL2D'라는 탭이 좌측 툴바에 생깁니다.
+
+이 탭에는 'Info' ,'Output', 'Cel', 'Indicators', 'Book'라는 패널이 있습니다.
+
+현재는 'Info', 'Output' 패널만이 기능이 있습니다.
+
+'Info' 패널에는 BL2D에 대한 정보가 있습니다.
+
+'Output' 패널에는 'Export Keyframes', 'Export full sheet preview'라는 두 버튼이 있습니다.
+
+'Export Keyframes'를 누르면 현재 컷의 원화를 모두 출력합니다.
+
+'Export full sheet preview'를 클릭하면 현재 컷의 전체 용지 프리뷰를 출력합니다.
+
+Grease Pencil
+------------
+
+Grease Pencil이란 블렌더에서 제공하는 드로잉 도구입니다. (자세한 것은 [공식 메뉴얼](https://docs.blender.org/manual/en/dev/interface/grease_pencil/introduction.html) 참고.)
+
+BL2D에서는 Grease Pencil 기능을 통하여 애니메이션의 레이아웃/원화 제작을 지원하고 있습니다.
+>>>>>>> master
