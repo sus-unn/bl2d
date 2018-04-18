@@ -111,6 +111,6 @@ Only 'Info' and 'Output' is working now.
 Grease Pencil
 ------------
 
-Grease Pencil enables to 'draw' inside blender (for the details, [read official manual](https://docs.blender.org/manual/en/dev/interface/grease_pencil/introduction.html).
+Grease Pencil enables to 'draw' inside blender (for the details, [read official manual](https://docs.blender.org/manual/en/dev/interface/grease_pencil/introduction.html).)
 
 With BL2D, an animator can make 2d animation LO/Key animation in blender.
