@@ -110,3 +110,10 @@ UI
 'Export Keyframes'를 누르면 현재 컷의 원화를 모두 출력합니다.
 
 'Export full sheet preview'를 클릭하면 현재 컷의 전체 용지 프리뷰를 출력합니다.
+
+Grease Pencil
+------------
+
+Grease Pencil이란 블렌더에서 제공하는 드로잉 도구입니다. (자세한 것은 [공식 메뉴얼](https://docs.blender.org/manual/en/dev/interface/grease_pencil/introduction.html) 참고.
+
+BL2D에서는 Grease Pencil 기능을 통하여 애니메이션의 레이아웃/원화 제작을 지원하고 있습니다.

@@ -107,3 +107,10 @@ Only 'Info' and 'Output' is working now.
 "Export Keyframes" will export all of the keyframes in the cut.
 
 "Export full sheet preview" will export the preview with border and aspect ratio iof 'Sheet'.
+
+Grease Pencil
+------------
+
+Grease Pencil enables to 'draw' inside blender (for the details, [read official manual](https://docs.blender.org/manual/en/dev/interface/grease_pencil/introduction.html).
+
+BL2D에서는 Grease Pencil 기능을 통하여 애니메이션의 레이아웃/원화 제작을 지원하고 있습니다.
