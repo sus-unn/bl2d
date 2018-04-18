@@ -113,4 +113,4 @@ Grease Pencil
 
 Grease Pencil enables to 'draw' inside blender (for the details, [read official manual](https://docs.blender.org/manual/en/dev/interface/grease_pencil/introduction.html).
 
-BL2D에서는 Grease Pencil 기능을 통하여 애니메이션의 레이아웃/원화 제작을 지원하고 있습니다.
+With BL2D, an animator can make 2d animation LO/Key animation in blender.
