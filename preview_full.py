@@ -73,3 +73,4 @@ class preview_full_export(bpy.types.Operator):
         bpy.context.scene.frame_set(bl2d.scene.frame_start)
         
         return {'FINISHED'}
+
