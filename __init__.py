@@ -23,9 +23,10 @@ bl_info = { \
     'author': 'Susunn',
     'version': (0, 6, 6),
     'blender': (2, 79, 0),
-    'location': 'Toolshelf > Tools',
+    'location': 'Toolshelf > BL2D',
     'description': 'Make 2D animation in blender. This add-on and template file is yet uncomplete.',
     'tracker_url': 'https://github.com/sus-unn/bl2d/issues',
+    'warning': 'Features are unstable and under early stage of developement',
     'wiki_url': 'https://github.com/sus-unn/bl2d',
     'support': 'COMMUNITY',
     'category': 'Animation'}
