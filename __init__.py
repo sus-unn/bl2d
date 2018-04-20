@@ -69,11 +69,7 @@ class VIEW3D_PT_tools_bl2d_info(View3DPanel, Panel):
         box = layout.box()
         box.label("Info")
         
-<<<<<<< HEAD
-        box.label("Version 0.006.000d")
-=======
-        box.label("Version 0.6.6")
->>>>>>> master
+        box.label("Version 0.6.6")r
         
         
         col=layout.column()
