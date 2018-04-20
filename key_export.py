@@ -65,7 +65,7 @@ class ExportKey(bpy.types.Operator):
     
     @classmethod
     def poll(cls, context):
-        return context.object is not None
+        return bl2d.poll()
         
     def execute(self, context):
         #currently this variables are pre-defined

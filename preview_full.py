@@ -30,7 +30,7 @@ class preview_full_export(bpy.types.Operator):
     
     @classmethod
     def poll(cls, context):
-        return bpy.data.objects['Camera_WholeSheet'] is not None
+        return bl2d.poll()
         
     def execute(self, context):
         
