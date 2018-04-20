@@ -112,7 +112,7 @@ BL2D의 템플릿은 Scene으로 작화, 타임시트, '미리 정의된 오브�
 
 그러나, 'Camera_WholeSheet'는 용지만을 촬영하기 위함이기에 Perspective뷰로 바꾸는 것이 권장되지 않습니다.
 
-<<<<<<< HEAD
+
 =======
 UI
 --
@@ -137,4 +137,4 @@ Grease Pencil
 Grease Pencil이란 블렌더에서 제공하는 드로잉 도구입니다. (자세한 것은 [공식 메뉴얼](https://docs.blender.org/manual/en/dev/interface/grease_pencil/introduction.html) 참고.)
 
 BL2D에서는 Grease Pencil 기능을 통하여 애니메이션의 레이아웃/원화 제작을 지원하고 있습니다.
->>>>>>> master
+
