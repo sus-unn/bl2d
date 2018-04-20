@@ -90,8 +90,10 @@ class ExportKey(bpy.types.Operator):
         
         #Set Print Sheet
         
-        bl2d.scene.render.resolution_x = bpy.data.objects['Sheet'].scale[0] * bl2d.print_dpi * bl2d.inch_ratio * 100
-        bl2d.scene.render.resolution_y = bpy.data.objects['Sheet'].scale[1] * bl2d.print_dpi * bl2d.inch_ratio * 100
+        sheet = bpy.data.objects['Sheet_Base']
+        
+        bl2d.scene.render.resolution_x = sheet.scale[0] * bl2d.print_dpi * bl2d.inch_ratio * 100
+        bl2d.scene.render.resolution_y = sheet.scale[1] * bl2d.print_dpi * bl2d.inch_ratio * 100
         
         bl2d.scene.frame_set(bl2d.scene.frame_start)
         

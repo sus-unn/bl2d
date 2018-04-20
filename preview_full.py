@@ -48,9 +48,11 @@ class preview_full_export(bpy.types.Operator):
         bpy.context.scene.camera = bpy.data.objects['Camera_WholeSheet']
  
         #Set Print Sheet
+        
+        sheet = bpy.data.objects['Sheet_Base']
 
-        bl2d.scene.render.resolution_x = bpy.data.objects['Sheet'].scale[0] * bl2d.scan_dpi * bl2d.inch_ratio * 100
-        bl2d.scene.render.resolution_y = bpy.data.objects['Sheet'].scale[1] * bl2d.scan_dpi * bl2d.inch_ratio * 100
+        bl2d.scene.render.resolution_x = sheet.scale[0] * bl2d.scan_dpi * bl2d.inch_ratio * 100
+        bl2d.scene.render.resolution_y = sheet.scale[1] * bl2d.scan_dpi * bl2d.inch_ratio * 100
 
 
 
