@@ -31,7 +31,7 @@ Do not push tags to the Github repo.
 Bug reporting/Issues/Ideas
 -----------
 
-[There are Github repo Issue page] (https://github.com/sus-unn/bl2d/issues) which is always open. 
+[There are Github repo Issue page](https://github.com/sus-unn/bl2d/issues) which is always open. 
 
 You might want to send me an email or DM me on twitter. Though I will answer, it is not recommended.
 
