@@ -17,37 +17,37 @@ latest stable release is 0.6.7
 Before you use
 ---------
     
-  Enable 'International fonts'
+- Enable 'International fonts'
   
-  You must have Blender 
+- You must have Blender 
   
-  Blender version must be at least 2.79
+- Blender version must be at least 2.79
 	
 Installation
 -----------
 
-  1 Press 'Download as ZIP' or download using git client.
+- Press 'Download as ZIP' or download using git client.
   
-  (1.5 If you've donwloaded from git client, you must pack the files to .zip file. (It is recommended to exclude .git folder in zip) )
+- (If you've donwloaded from git client, you must pack the files to .zip file. (It is recommended to exclude .git folder in zip) )
   
-  2 Open Blender
+- Open Blender
   
-  3 File > User Preferences > Add-ons > Install Add-on from file > open downloaded zip file
+- File > User Preferences > Add-ons > Install Add-on from file > open downloaded zip file
   
-  4 Enable Add-on
+- Enable Add-on
   
 How to use
 ---------
 
-  0. First of all, User must be familiar with blender.
+- First of all, User must be familiar with blender.
   
-  1. Copy 'template.blend' to your working directory.
+- Copy 'template.blend' to your working directory.
   
-  2. Change its name to whatever you want.
+- Change its name to whatever you want.
   
-  3. Open template file and install bl2d add-on. 
+- Open template file and install bl2d add-on. 
   
-  4. For further information, read 'docs/manual.en.md' or 'docs/manual.kr.md'
+- For further information, read 'docs/manual.en.md' or 'docs/manual.kr.md'
 
 
     
