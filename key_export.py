@@ -22,6 +22,8 @@ import bpy
 import os
 from . import bl2d
 
+# Multiple size sheet export not supported yet.
+
 
 
 key_jump_next = 0
