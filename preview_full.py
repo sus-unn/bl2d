@@ -42,33 +42,21 @@ class preview_full_export(bpy.types.Operator):
         fpath = bl2d.scene.render.filepath
         fname = "Preview"
 
-
         #Set Print Camera
-
         bpy.context.scene.camera = bpy.data.objects['Camera_WholeSheet']
  
         #Set Print Sheet
-        
         sheet = bpy.data.objects['Sheet_Base']
-
         bl2d.scene.render.resolution_x = sheet.scale[0] * bl2d.scan_dpi * bl2d.inch_ratio * 100
         bl2d.scene.render.resolution_y = sheet.scale[1] * bl2d.scan_dpi * bl2d.inch_ratio * 100
-
-
-
-
         bl2d.scene.render.filepath = fpath + fname
-
         bpy.ops.render.opengl(animation=True, sequencer=False, write_still=False, view_context=True)
-
-
-
+        
         #restore Camera
         bpy.context.scene.camera = current_cam
         #restore render settings
         bl2d.scene.render.resolution_x = current_render_width
         bl2d.scene.render.resolution_y = current_render_height 
-        
         bl2d.scene.render.filepath = fpath
         bpy.context.scene.frame_set(bl2d.scene.frame_start)
         

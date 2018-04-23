@@ -68,13 +68,9 @@ class VIEW3D_PT_tools_bl2d_info(View3DPanel, Panel):
         
         col = layout.column()
         #col.label(text = "BL2D", icon_value = bl2d_icons["custom_icon"].icon_id)
-        
         box = layout.box()
         box.label("Info")
-        
         box.label("Version 0.6.7")
-        
-        
         col=layout.column()
         
         
@@ -102,23 +98,17 @@ class VIEW3D_PT_tools_bl2d_sheet(View3DPanel, Panel):
         layout = self.layout
         
         col = layout.column()
-        
         col.label(text = "Move sheet origin point")
-        
         col = layout.column()
-        
         row = col.row()
         
         row.operator("object.sheet_op_mv_ul", text = "Upper Left")
-        
         row.operator("object.sheet_op_mv_ur", text = "Upper Right")
         
         col = layout.column(align = True)
-        
         row = col.row()
 
         row.operator("object.sheet_op_mv_ll", text = "Lower Left")
-        
         row.operator("object.sheet_op_mv_lr", text = "Lower Right")
         
         col = layout.column() 
@@ -131,7 +121,6 @@ class VIEW3D_PT_tools_bl2d_indicators(View3DPanel, Panel):
     
     def draw(self, context):
         layout = self.layout
-        
         col = layout.column()        
         
 class VIEW3D_PT_tools_bl2d_book(View3DPanel, Panel):
@@ -142,7 +131,6 @@ class VIEW3D_PT_tools_bl2d_book(View3DPanel, Panel):
     
     def draw(self, context):
         layout = self.layout
-        
         col = layout.column()     
 
 '''    

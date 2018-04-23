@@ -24,11 +24,8 @@ from . import bl2d
 
 # Multiple size sheet export not supported yet.
 
-
-
 key_jump_next = 0
 key_jump_prev = 1
-
 
 def key_export(gp_layer_name):
 
@@ -48,12 +45,16 @@ def key_export(gp_layer_name):
             
         if(key_count_sheet < 10):
             key_count_str = "000" + key_count_str
+            
         if(10 <= key_count_sheet < 100):
             key_count_str = "00" + key_count_str
+            
         if(100 <= key_count_sheet < 1000):
             key_count_str = "0" + key_count_str
+            
         bl2d.scene.render.filepath = bl2d.fpath + bl2d.fname + "_" + gp_layer_name + "_"
         bl2d.scene.render.filepath += str(key_count_str)
+        
         if bl2d.gp_layers[gp_layer_name].frames[key_count_blend].strokes.items():
             bpy.ops.render.opengl(animation=False, sequencer=False, write_still=True, view_context=True)
             key_count_sheet += 1
@@ -71,7 +72,6 @@ class ExportKey(bpy.types.Operator):
         
     def execute(self, context):
         #currently this variables are pre-defined
-        
         bl2d.scene = bpy.data.scenes['Main']
         bl2d.gp_layers = bpy.data.grease_pencil['GPencil_Main'].layers
         
@@ -87,16 +87,13 @@ class ExportKey(bpy.types.Operator):
         bl2d.fpath = bl2d.scene.render.filepath 
         
         #Set Print Camera
-        
         bl2d.scene.camera = bpy.data.objects['Camera_WholeSheet']
         
         #Set Print Sheet
-        
         sheet = bpy.data.objects['Sheet_Base']
         
         bl2d.scene.render.resolution_x = sheet.scale[0] * bl2d.print_dpi * bl2d.inch_ratio * 100
         bl2d.scene.render.resolution_y = sheet.scale[1] * bl2d.print_dpi * bl2d.inch_ratio * 100
-        
         bl2d.scene.frame_set(bl2d.scene.frame_start)
         
         #print all cels here
@@ -113,8 +110,6 @@ class ExportKey(bpy.types.Operator):
         
         for each_gp_layer in bl2d.gp_layers: #unhide all GPencil Layers
             each_gp_layer.hide = False
-        
-        
         
         #restore Camera
         bl2d.scene.camera = current_cam
