@@ -103,7 +103,7 @@ class VIEW3D_PT_tools_bl2d_sheet(View3DPanel, Panel):
         
         col = layout.column()
         
-        col.label = (text = "Move sheet origin point")
+        col.label(text = "Move sheet origin point")
         
         col = layout.column()
         
