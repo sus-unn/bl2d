@@ -36,11 +36,13 @@ if "bpy" in locals():
     importlib.reload(bl2d)
     importlib.reload(key_export)
     importlib.reload(preview_full)
+    importlib.reload(sheets)
     
 else:
     from . import bl2d
     from . import key_export
     from . import preview_full
+    from . import sheets
     
 import os
 import bpy
@@ -99,7 +101,27 @@ class VIEW3D_PT_tools_bl2d_sheet(View3DPanel, Panel):
     def draw(self, context):
         layout = self.layout
         
-        col = layout.column()     
+        col = layout.column()
+        
+        col.label = (text = "Move sheet origin point")
+        
+        col = layout.column()
+        
+        layout.operator("object.sheet_op_mv_ul", text = "Upper Left")
+        
+        row = layout.row()
+        
+        layout.operator("object.sheet_op_mv_ur", text = "Upper Right")
+        
+        col = layout.column()  
+
+        layout.operator("object.sheet_op_mv_ll", text = "Lower Left")
+        
+        row = layout.row()
+        
+        layout.operator("object.sheet_op_mv_lr", text = "Lower Right")
+        
+        col = layout.column() 
         
 class VIEW3D_PT_tools_bl2d_indicators(View3DPanel, Panel):
 
