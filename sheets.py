@@ -22,24 +22,11 @@ import bpy
 
 from . import bl2d
 
-class SheetPivotMoveLU(bpy.types.Operator):
+class SheetOriginMoveLU(bpy.types.Operator):
     
-    bl_idname = "object.sheet_pv_mv_lu"
-    bl_label = "Move sheet pivot point"
-    bl_description = "Move sheet pivot point to upper left vertex, so that we can extend them in certain direction."
-    
-    @classmethod
-    def poll(cls, context):
-        return bl2d.poll()
-        
-    def execute(self, context):
-        return {'FINISHED'}
-        
-class SheetPivotMoveLL(bpy.types.Operator):
-    
-    bl_idname = "object.sheet_pv_mv_ll"
-    bl_label = "Move sheet pivot point"
-    bl_description = "Move sheet pivot point to lower left vertex, so that we can extend them in certain direction."
+    bl_idname = "object.sheet_op_mv_lu"
+    bl_label = "Move sheet origin point"
+    bl_description = "Move sheet origin point to upper left vertex, so that we can extend them in certain direction."
     
     @classmethod
     def poll(cls, context):
@@ -48,11 +35,24 @@ class SheetPivotMoveLL(bpy.types.Operator):
     def execute(self, context):
         return {'FINISHED'}
         
-class SheetPivotMoveRU(bpy.types.Operator):
+class SheetOriginMoveLL(bpy.types.Operator):
     
-    bl_idname = "object.sheet_pv_mv_ru"
-    bl_label = "Move sheet pivot point"
-    bl_description = "Move sheet pivot point to upper right vertex, so that we can extend them in certain direction."
+    bl_idname = "object.sheet_op_mv_ll"
+    bl_label = "Move sheet origin point"
+    bl_description = "Move sheet origin point to lower left vertex, so that we can extend them in certain direction."
+    
+    @classmethod
+    def poll(cls, context):
+        return bl2d.poll()
+        
+    def execute(self, context):
+        return {'FINISHED'}
+        
+class SheetOriginMoveRU(bpy.types.Operator):
+    
+    bl_idname = "object.sheet_op_mv_ru"
+    bl_label = "Move sheet origin point"
+    bl_description = "Move sheet origin point to upper right vertex, so that we can extend them in certain direction."
     
     @classmethod
     def poll(cls, context):
@@ -61,11 +61,11 @@ class SheetPivotMoveRU(bpy.types.Operator):
     def execute(self, context):
         return {'FINISHED'}
         
-class SheetPivotMoveRL(bpy.types.Operator):
+class SheetOriginMoveRL(bpy.types.Operator):
     
-    bl_idname = "object.sheet_pv_mv_rl"
-    bl_label = "Move sheet pivot point"
-    bl_description = "Move sheet pivot point to lower right vertex, so that we can extend them in certain direction."
+    bl_idname = "object.sheet_op_mv_rl"
+    bl_label = "Move sheet origin point"
+    bl_description = "Move sheet origin point to lower right vertex, so that we can extend them in certain direction."
     
     @classmethod
     def poll(cls, context):
@@ -73,3 +73,4 @@ class SheetPivotMoveRL(bpy.types.Operator):
         
     def execute(self, context):
         return {'FINISHED'}
+        
