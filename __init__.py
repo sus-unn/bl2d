@@ -107,19 +107,17 @@ class VIEW3D_PT_tools_bl2d_sheet(View3DPanel, Panel):
         
         col = layout.column()
         
-        layout.operator("object.sheet_op_mv_ul", text = "Upper Left")
+        row  = split.row()
         
-        row = layout.row()
+        row.operator("object.sheet_op_mv_ul", text = "Upper Left")
         
-        layout.operator("object.sheet_op_mv_ur", text = "Upper Right")
+        row.operator("object.sheet_op_mv_ur", text = "Upper Right")
         
-        col = layout.column()  
+        row  = split.row()
 
-        layout.operator("object.sheet_op_mv_ll", text = "Lower Left")
+        row.operator("object.sheet_op_mv_ll", text = "Lower Left")
         
-        row = layout.row()
-        
-        layout.operator("object.sheet_op_mv_lr", text = "Lower Right")
+        row.operator("object.sheet_op_mv_lr", text = "Lower Right")
         
         col = layout.column() 
         
