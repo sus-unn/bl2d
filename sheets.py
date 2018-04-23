@@ -22,9 +22,9 @@ import bpy
 
 from . import bl2d
 
-class SheetOriginMoveLU(bpy.types.Operator):
+class SheetOriginMoveUL(bpy.types.Operator):
     
-    bl_idname = "object.sheet_op_mv_lu"
+    bl_idname = "object.sheet_op_mv_ul"
     bl_label = "Move sheet origin point"
     bl_description = "Move sheet origin point to upper left vertex, so that we can extend them in certain direction."
     
@@ -48,9 +48,9 @@ class SheetOriginMoveLL(bpy.types.Operator):
     def execute(self, context):
         return {'FINISHED'}
         
-class SheetOriginMoveRU(bpy.types.Operator):
+class SheetOriginMoveUR(bpy.types.Operator):
     
-    bl_idname = "object.sheet_op_mv_ru"
+    bl_idname = "object.sheet_op_mv_ur"
     bl_label = "Move sheet origin point"
     bl_description = "Move sheet origin point to upper right vertex, so that we can extend them in certain direction."
     
@@ -61,9 +61,9 @@ class SheetOriginMoveRU(bpy.types.Operator):
     def execute(self, context):
         return {'FINISHED'}
         
-class SheetOriginMoveRL(bpy.types.Operator):
+class SheetOriginMoveLR(bpy.types.Operator):
     
-    bl_idname = "object.sheet_op_mv_rl"
+    bl_idname = "object.sheet_op_mv_lr"
     bl_label = "Move sheet origin point"
     bl_description = "Move sheet origin point to lower right vertex, so that we can extend them in certain direction."
     
