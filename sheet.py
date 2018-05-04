@@ -22,6 +22,9 @@ import bpy
 
 from . import bl2d
 
+def GetVertexPos(pos):
+	return 0
+
 class SheetOriginMoveUL(bpy.types.Operator):
     
     bl_idname = "object.sheet_op_mv_ul"
