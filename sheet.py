@@ -23,6 +23,9 @@ import bpy
 from . import bl2d
 
 def GetVertexPos(pos):
+# for each vertices, get ther coord
+# compare them
+# return vertex in pos
     return 0
 
 class SheetOriginMoveUL(bpy.types.Operator):
