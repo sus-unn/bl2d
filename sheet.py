@@ -23,9 +23,15 @@ import bpy
 from . import bl2d
 
 def GetVertexPos(pos):
+# backupt context (object, mode)
+# get current mode
+# if edit mode
+#   goto object mode
+# select sheet object
+# check if count of verticeis ar not 4
 # for each vertices, get ther coord
 # compare them
-# return vertex in pos
+# return vertex corresponds to arg
     return 0
 
 class SheetOriginMoveUL(bpy.types.Operator):
