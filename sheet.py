@@ -19,6 +19,7 @@
 # Sus-unn
 
 import bpy
+import bmesh
 
 from . import bl2d
 
@@ -38,6 +39,13 @@ def GetVertexPos(pos):
 # for each vertices, get ther coord
 # compare them
 # return vertex corresponds to arg
+
+    #backup seleciton
+    context_sel  = bpy.context.selected_objects
+    context_mode = bpy.context.mode
+    
+    
+    
     return 0
 
 class SheetOriginMoveUL(bpy.types.Operator):
