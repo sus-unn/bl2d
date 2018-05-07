@@ -26,6 +26,7 @@ v_UL = 0
 v_LL = 1
 v_UR = 2
 v_LR = 3
+#error return == -1
 
 def GetVertexPos(pos):
 # backupt context (object, mode)
