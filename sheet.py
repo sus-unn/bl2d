@@ -22,6 +22,11 @@ import bpy
 
 from . import bl2d
 
+v_UL = 0
+v_LL = 1
+v_UR = 2
+v_LR = 3
+
 def GetVertexPos(pos):
 # backupt context (object, mode)
 # get current mode
