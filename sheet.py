@@ -29,6 +29,11 @@ def GetVertexPos(pos):
     return 0
 
 class SheetOriginMoveUL(bpy.types.Operator):
+    # the reason these SheetOriginMove classes not inheriting common parent class, but being code duplicated,
+    # is that inheriting parent class which inehrits bpy.types.Operator 
+    # makes these classes unregistered as an operator
+    # so I had to just copy and paste codes
+    # if anyone knows how to fix this issue, and fix it, I'll be thankful
     
     bl_idname = "object.sheet_op_mv_ul"
     bl_label = "Move sheet origin point"
