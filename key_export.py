@@ -71,6 +71,7 @@ class ExportKey(bpy.types.Operator):
         return bl2d.poll()
         
     def execute(self, context):
+        print("started printing keyframes")
         #currently this variables are pre-defined
         bl2d.scene = bpy.data.scenes['Main']
         bl2d.gp_layers = bpy.data.grease_pencil['GPencil_Main'].layers
@@ -93,7 +94,9 @@ class ExportKey(bpy.types.Operator):
         sheet = bpy.data.objects['Sheet_Base']
         
         bl2d.scene.render.resolution_x = sheet.scale[0] * bl2d.print_dpi * bl2d.inch_ratio * 100
+        print("Resolution X = ", bl2d.scene.render.resolution_x) # debug
         bl2d.scene.render.resolution_y = sheet.scale[1] * bl2d.print_dpi * bl2d.inch_ratio * 100
+        print("Resolution Y = ", bl2d.scene.render.resolution_y) # debug
         bl2d.scene.frame_set(bl2d.scene.frame_start)
         
         #print all cels here
@@ -120,6 +123,8 @@ class ExportKey(bpy.types.Operator):
         
         bl2d.scene.render.filepath = bl2d.fpath
         bl2d.scene.frame_set(bl2d.scene.frame_start)
+        
+        print("printing finished")
         return {'FINISHED'}
 
  
