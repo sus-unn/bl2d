@@ -20,6 +20,7 @@
 
 import bpy
 import bmesh
+import math
 
 from . import bl2d
 
@@ -29,7 +30,6 @@ v_UR = 2
 v_LR = 3
 #error return == -1
 
-def GetVertexPos(pos):
 # backupt context (object, mode)
 # get current mode
 # if edit mode
@@ -39,12 +39,44 @@ def GetVertexPos(pos):
 # for each vertices, get ther coord
 # compare them
 # return vertex corresponds to arg
+def SetVertexPos(pos):
+
 
     #backup seleciton
-    context_sel  = bpy.context.selected_objects
+    context_sel  = 0
     context_mode = bpy.context.mode
+    ob = bpy.data.objects['Sheet_Base']
     
+    #unselect objects
+    for i in range(0, len(bpy.context.selected_objects)-1):
+        context_sel[i] = bpy.context.selected_objects[i]
     
+    bpy.ops.object.mode_set(mode = 'OBJECT')
+    for i in bpy.context.selected_objects:
+        i.select = False
+    ob.select = True
+    bpy.ops.object.mode_set(mode = 'EDIT')
+    bpy.ops.mesh.select_mode(type="VERT")
+    bpy.ops.mesh.select_all(action = 'DESELECT')
+    
+    mesh=bmesh.from_edit_mesh(bpy.context.object.data)
+    if hasattr(mesh.verts, "ensure_lookup_table"): 
+        mesh.verts.ensure_lookup_table()
+    
+    v_count = len(mesh.verts)
+    if v_count > 4 : 
+        return -1 # BaseSheet object must have to be plane with 4 vertices
+        
+    # sort method : (X, Y) Vert with highest X first, lowest Y last. 
+    
+    target = [[ob.data.vertices[0].co[0], ob.data.vertices[0].co[1]], [ob.data.vertices[1].co[0], ob.data.vertices[1].co[1]], [ob.data.vertices[2].co[0], ob.data.vertices[2].co[0]], [ob.data.vertices[3].co[0], ob.data.vertices[3].co[0]]]
+    print("vertices coord: ", target)
+    sorted(target , key=lambda k: [k[1], k[0]], reverse = True)
+    print("vertices coord sorted: ", target) # debug
+    
+    mesh.verts[0].select = True
+    
+    bpy.ops.object.mode_set(mode = 'OBJECT')
     
     return 0
 
@@ -64,6 +96,7 @@ class SheetOriginMoveUL(bpy.types.Operator):
         return bl2d.poll()
         
     def execute(self, context):
+        SetVertexPos(v_UL)
         return {'FINISHED'}
         
 class SheetOriginMoveLL(bpy.types.Operator):
@@ -77,6 +110,7 @@ class SheetOriginMoveLL(bpy.types.Operator):
         return bl2d.poll()
         
     def execute(self, context):
+        SetVertexPos(v_LL)
         return {'FINISHED'}
         
 class SheetOriginMoveUR(bpy.types.Operator):
@@ -90,6 +124,7 @@ class SheetOriginMoveUR(bpy.types.Operator):
         return bl2d.poll()
         
     def execute(self, context):
+        SetVertexPos(v_UR)
         return {'FINISHED'}
         
 class SheetOriginMoveLR(bpy.types.Operator):
@@ -103,5 +138,6 @@ class SheetOriginMoveLR(bpy.types.Operator):
         return bl2d.poll()
         
     def execute(self, context):
+        SetVertexPos(v_LR)
         return {'FINISHED'}
         
