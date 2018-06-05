@@ -16,6 +16,15 @@ doc/manual.en.md
 Developement Guide
 -----------------
 
+Branches
+--------
+
+- master: Main release branch. Only stable versions.
+- ~rc: Release candidate branch. When ~rc branch is confirmed and stable, it will be merged to master.
+- dev: Development branch. Development for specific version will be conducted here. When done, wil be merged to ~rc branch. 
+- sub-branches of dev: Add features here, will be merged to dev.
+- There can also be version-dependent branches for certain features.
+
 Version numbering
 ---------------
 
