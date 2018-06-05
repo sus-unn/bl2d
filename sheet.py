@@ -73,7 +73,8 @@ def SetVertexPos(pos):
     print("vertices coord: ", target)
     sorted(target , key=lambda k: [k[1], k[0]], reverse = True)
     print("vertices coord sorted: ", target) # debug
-    
+
+    # will have to make desired vertex selected. 
     mesh.verts[0].select = True
     
     bpy.ops.object.mode_set(mode = 'OBJECT')
