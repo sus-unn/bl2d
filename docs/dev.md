@@ -24,6 +24,7 @@ Branches
 - dev: Development branch. Development for specific version will be conducted here. When done, wil be merged to ~rc branch. 
 - sub-branches of dev: Add features here, will be merged to dev.
 - There can also be version-dependent branches for certain features.
+- PLEASE DO NOT PULL REQUEST MERGE TO MASTER IF SOMETHING NOT HOTFIX. MERGE TO RC, DEV OR ITS SUBBRANCHES ONLY. 
 
 Version numbering
 ---------------
