@@ -72,25 +72,25 @@ class ExportKey(bpy.types.Operator):
         
     def execute(self, context):
         print("started printing keyframes")
-        #currently this variables are pre-defined
+        # currently this variables are pre-defined
         bl2d.scene = bpy.data.scenes['Main']
         bl2d.gp_layers = bpy.data.grease_pencil['GPencil_Main'].layers
         
-        #backups
+        # backups
         current_format = bl2d.scene.render.image_settings.file_format
         current_cam = bpy.data.objects['Camera_Main']
-        #current_cam = bl2d.scene.camera #this one is alternative
+        #current_cam = bl2d.scene.camera # this one is alternative
         current_render_width = bl2d.scene.render.resolution_x 
         current_render_height = bl2d.scene.render.resolution_y
         
-        #export settings
+        # export settings
         bl2d.scene.render.image_settings.file_format = 'PNG'
         bl2d.fpath = bl2d.scene.render.filepath 
         
-        #Set Print Camera
+        # Set Print Camera
         bl2d.scene.camera = bpy.data.objects['Camera_WholeSheet']
         
-        #Set Print Sheet
+        # Set Print Sheet
         sheet = bpy.data.objects['Sheet_Base']
         
         bl2d.scene.render.resolution_x = sheet.scale[0] * bl2d.print_dpi * bl2d.inch_ratio * 100
@@ -99,24 +99,24 @@ class ExportKey(bpy.types.Operator):
         print("Resolution Y = ", bl2d.scene.render.resolution_y) # debug
         bl2d.scene.frame_set(bl2d.scene.frame_start)
         
-        #print all cels here
+        # print all cels here
         
-        for each_gp_layer in bl2d.gp_layers: #hide all layers
+        for each_gp_layer in bl2d.gp_layers: # hide all layers
             each_gp_layer.hide = True
         
-        for each_gp_layer in bl2d.gp_layers:#print each layers
+        for each_gp_layer in bl2d.gp_layers:# print each layers
             if(each_gp_layer.info[0] == "*"):
                 continue
-            each_gp_layer.hide = False #unhide current layer and...
+            each_gp_layer.hide = False # unhide current layer and...
             key_export(each_gp_layer.info)
             each_gp_layer.hide = True #...hide current layer again.
         
-        for each_gp_layer in bl2d.gp_layers: #unhide all GPencil Layers
+        for each_gp_layer in bl2d.gp_layers: # unhide all GPencil Layers
             each_gp_layer.hide = False
         
-        #restore Camera
+        # restore Camera
         bl2d.scene.camera = current_cam
-        #restore render settings
+        # restore render settings
         bl2d.scene.render.image_settings.file_format = current_format
         bl2d.scene.render.resolution_x = current_render_width
         bl2d.scene.render.resolution_y = current_render_height 
