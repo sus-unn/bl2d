@@ -27,3 +27,11 @@ from . import bl2d
 # remove correction paper
 # change color
 # resize
+
+class CorrectionAdd(bpy.types.Operator):
+
+class CorrectionRemove(bpy.types.Operator):
+
+class CorrectionChangeColor(bpy.types.Operator):
+
+class CorrectionResize(bpy.types.Operator):
