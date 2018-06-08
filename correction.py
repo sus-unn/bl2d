@@ -29,9 +29,49 @@ from . import bl2d
 # resize
 
 class CorrectionAdd(bpy.types.Operator):
+    bl_idname  = "gpencil.correctionadd"
+    bl_label = "Add correction paper"
+    bl_descprtion = "Add correction paper to current frame"
+    
+    @classmethod
+    def poll(cls, context):
+        return bl2d.poll()
+        
+    def execute(self, context):
+        return {'FINISHED'}
 
 class CorrectionRemove(bpy.types.Operator):
+    bl_idname  = "gpencil.correctionrm"
+    bl_label = "Remove correction paper"
+    bl_descprtion = "Remove correction paper from current frame"
+    
+    @classmethod
+    def poll(cls, context):
+        return bl2d.poll()
+        
+    def execute(self, context):
+        return {'FINISHED'}
 
 class CorrectionChangeColor(bpy.types.Operator):
+    bl_idname  = "gpencil.correctionchcol"
+    bl_label = "Remove color of correction paper"
+    bl_descprtion = "Remove color of correction paper of current frame"
+    
+    @classmethod
+    def poll(cls, context):
+        return bl2d.poll()
+        
+    def execute(self, context):
+        return {'FINISHED'}
 
 class CorrectionResize(bpy.types.Operator):
+    bl_idname  = "gpencil.correctionresz"
+    bl_label = "Resize correction paper"
+    bl_descprtion = "Resize current cel's correction paper"
+    
+    @classmethod
+    def poll(cls, context):
+        return bl2d.poll()
+        
+    def execute(self, context):
+        return {'FINISHED'}
