@@ -23,6 +23,7 @@ from . import bl2d
 from . import key_export
 from . import preview_full
 from . import sheet
+from . import correction
     
 import os
 import bpy
@@ -92,6 +93,22 @@ class VIEW3D_PT_tools_bl2d_sheet(View3DPanel, Panel):
         row.operator("object.sheet_op_mv_lr", text = "Lower Right")
         
         col = layout.column() 
+        col = layout.column() 
+        
+        col.label(text = "Correction paper")
+        
+        row = col.row()
+        
+        row.operator("gpencil.correctionadd", text = "Add correction paper")
+        row.operator("gpencil.correctionrm", text = "Remove correction paper")
+        
+        col = layout.column(align = True)
+        
+        col.operator("gpencil.correctionchcol", text = "Change correction color")
+        col.operator("gpencil.correctionresz", text = "Resize correction paper")
+        
+        col = layout.column() 
+        col = layout.column()
         
 class VIEW3D_PT_tools_bl2d_indicators(View3DPanel, Panel):
 

@@ -34,9 +34,20 @@ bl_info = { \
 if "bpy" in locals():
     import importlib
     importlib.reload(ui)
+    importlib.reload(bl2d)
+    importlib.reload(key_export)
+    importlib.reload(preview_full)
+    importlib.reload(sheet)
+    importlib.reload(correction)
     
 else:
     from . import ui
+    from . import bl2d
+    from . import key_export
+    from . import preview_full
+    from . import sheet
+    from . import correction
+    
     
 import os
 import bpy
