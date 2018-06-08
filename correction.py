@@ -21,3 +21,9 @@
 import bpy
 import os
 from . import bl2d
+
+# we need UI classes for:
+# add correction paper
+# remove correction paper
+# change color
+# resize
