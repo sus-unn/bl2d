@@ -37,7 +37,6 @@ if "bpy" in locals():
     importlib.reload(bl2d)
     importlib.reload(key_export)
     importlib.reload(preview_full)
-    importlib.reload(sheet)
     importlib.reload(correction)
     
 else:
@@ -45,7 +44,6 @@ else:
     from . import bl2d
     from . import key_export
     from . import preview_full
-    from . import sheet
     from . import correction
     
     
