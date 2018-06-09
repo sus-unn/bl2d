@@ -40,7 +40,7 @@ class CorrectionAdd(bpy.types.Operator):
         return bl2d.poll()
         
     def execute(self, context):
-        print("\nAdd correction paper\n") # debug
+        print("\nAdd correction paper") # debug
         
         if not bpy.context.scene.grease_pencil.layers.active.frames:
             bpy.ops.gpencil.blank_frame_add()
@@ -61,13 +61,14 @@ class CorrectionAdd(bpy.types.Operator):
         v[1] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[1].co) 
         v[2] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[3].co) 
         v[3] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[2].co) 
-        print("local coordinates:")
+        print("\nlocal coordinates:")
         print(v)
         
         # get global coordinates
-        for i in range (0,4):
+        for i in range (0,3):
             v[i] = bpy.data.objects['Sheet_Base'].matrix_world * v[i]
-        
+        print("\nInitial copy:")
+        print(v)
         '''
         for i in range(0,2):
             v[0][i] = bpy.data.objects['Sheet_Base'].matrix_world[0][i] * v[0][i]
