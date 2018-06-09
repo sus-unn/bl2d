@@ -77,22 +77,6 @@ class VIEW3D_PT_tools_bl2d_sheet(View3DPanel, Panel):
     
     def draw(self, context):
         layout = self.layout
-        
-        col = layout.column()
-        col.label(text = "Move sheet origin point")
-        col = layout.column()
-        row = col.row()
-        
-        row.operator("object.sheet_op_mv_ul", text = "Upper Left")
-        row.operator("object.sheet_op_mv_ur", text = "Upper Right")
-        
-        col = layout.column(align = True)
-        row = col.row()
-
-        row.operator("object.sheet_op_mv_ll", text = "Lower Left")
-        row.operator("object.sheet_op_mv_lr", text = "Lower Right")
-        
-        col = layout.column() 
         col = layout.column() 
         
         col.label(text = "Correction paper")
