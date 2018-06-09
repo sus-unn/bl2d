@@ -60,7 +60,7 @@ class CorrectionAdd(bpy.types.Operator):
         v[0] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[0].co) 
         v[1] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[1].co) 
         v[2] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[3].co) 
-        v[3] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[2].co) 
+        v[3] = bpy.data.objects['Sheet_Base'].matrix_world.to_translation()
         print("\nlocal coordinates:")
         print(v)
         
@@ -74,15 +74,15 @@ class CorrectionAdd(bpy.types.Operator):
         for l in range(0,3):
             str.points[l].co = copy.copy(tuple(v[l]))
         
-        str.points[3].co = tuple(v[3])
+        str.points[3].co[0] = v[3][0]
+        str.points[3].co[1] = v[3][1]
+        str.points[3].co[2] = v[3][2]
         print("\ncreated strokes: ") # debug
         for i in range(0,4): 
             print(i, " : ", str.points[i].co) 
         print('\n')
         # done
         
-
-
         return {'FINISHED'}
 
 class CorrectionRemove(bpy.types.Operator):
