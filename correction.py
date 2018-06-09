@@ -30,8 +30,53 @@ from . import bl2d
 # change color
 # resize
 
-class CorrectionAdd(bpy.types.Operator):
-    bl_idname  = "gpencil.correctionadd"
+def fCorrectionAdd(color):
+    print("\nAdd correction paper") # debug
+        
+    if not bpy.context.scene.grease_pencil.layers.active.frames:
+        bpy.ops.gpencil.blank_frame_add()
+    str = bpy.context.scene.grease_pencil.layers.active.active_frame.strokes.new(colorname=color)
+    str.draw_mode = '3DSPACE'
+    str.line_width = 1
+    str.points.add(count=4)
+    
+    # copy world coordinate of each vertices in Sheet_Base to v
+    # for loop in v
+    
+    v = [[[0],[0],[0]], [[0],[0],[0]], [[0],[0],[0]], [[0],[0],[0]]]
+    # globa_coord = bpy.data.objects['Sheet_Base']matrix_world * bpy.data.objects['Sheet_Base'].data.vertices[0].co[0]
+    
+    # copy coordinates
+    # Sheet_Base vertices id goes like 0,1,3,2.. so it has to be like this. Without using loop.
+    v[0] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[0].co) 
+    v[1] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[1].co) 
+    v[2] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[3].co) 
+    v[3] = bpy.data.objects['Sheet_Base'].matrix_world.to_translation()
+    print("\nlocal coordinates:")
+    print(v)
+        
+    # get global coordinates
+    for i in range (0,3):
+        v[i] = bpy.data.objects['Sheet_Base'].matrix_world * v[i]
+    print("\nInitial copy:")
+    print(v)
+      
+    # v[3] = loc = bpy.data.objects['Sheet_Base'].matrix_world.to_translation()
+    for l in range(0,3):
+        str.points[l].co = copy.copy(tuple(v[l]))
+        
+    str.points[3].co[0] = v[3][0]
+    str.points[3].co[1] = v[3][1]
+    str.points[3].co[2] = v[3][2]
+    print("\ncreated strokes: ") # debug
+    for i in range(0,4): 
+        print(i, " : ", str.points[i].co) 
+    print('\n')
+    # done
+        
+
+class CorrectionAddYellow(bpy.types.Operator):
+    bl_idname  = "gpencil.correctionaddyellow"
     bl_label = "Add correction paper"
     bl_descprtion = "Add correction paper to current frame"
     
@@ -40,49 +85,46 @@ class CorrectionAdd(bpy.types.Operator):
         return bl2d.poll()
         
     def execute(self, context):
-        print("\nAdd correction paper") # debug
+        fCorrectionAdd('CorrectionYellow')
+        return {'FINISHED'}
+
+class CorrectionAddBlue(bpy.types.Operator):
+    bl_idname  = "gpencil.correctionaddblue"
+    bl_label = "Add correction paper"
+    bl_descprtion = "Add correction paper to current frame"
+    
+    @classmethod
+    def poll(cls, context):
+        return bl2d.poll()
         
-        if not bpy.context.scene.grease_pencil.layers.active.frames:
-            bpy.ops.gpencil.blank_frame_add()
-        str = bpy.context.scene.grease_pencil.layers.active.active_frame.strokes.new(colorname='CorrectionYellow')
-        str.draw_mode = '3DSPACE'
-        str.line_width = 1
-        str.points.add(count=4)
+    def execute(self, context):
+        fCorrectionAdd('CorrectionBlue')
+        return {'FINISHED'}
         
-        # copy world coordinate of each vertices in Sheet_Base to v
-        # for loop in v
+class CorrectionAddGreen(bpy.types.Operator):
+    bl_idname  = "gpencil.correctionaddgreen"
+    bl_label = "Add correction paper"
+    bl_descprtion = "Add correction paper to current frame"
+    
+    @classmethod
+    def poll(cls, context):
+        return bl2d.poll()
         
-        v = [[[0],[0],[0]], [[0],[0],[0]], [[0],[0],[0]], [[0],[0],[0]]]
-        # globa_coord = bpy.data.objects['Sheet_Base']matrix_world * bpy.data.objects['Sheet_Base'].data.vertices[0].co[0]
+    def execute(self, context):
+        fCorrectionAdd('CorrectionGreen')
+        return {'FINISHED'}
         
-        # copy coordinates
-        # Sheet_Base vertices id goes like 0,1,3,2.. so it has to be like this. Without using loop.
-        v[0] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[0].co) 
-        v[1] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[1].co) 
-        v[2] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[3].co) 
-        v[3] = bpy.data.objects['Sheet_Base'].matrix_world.to_translation()
-        print("\nlocal coordinates:")
-        print(v)
+class CorrectionAddPink(bpy.types.Operator):
+    bl_idname  = "gpencil.correctionaddpink"
+    bl_label = "Add correction paper"
+    bl_descprtion = "Add correction paper to current frame"
+    
+    @classmethod
+    def poll(cls, context):
+        return bl2d.poll()
         
-        # get global coordinates
-        for i in range (0,3):
-            v[i] = bpy.data.objects['Sheet_Base'].matrix_world * v[i]
-        print("\nInitial copy:")
-        print(v)
-        
-        # v[3] = loc = bpy.data.objects['Sheet_Base'].matrix_world.to_translation()
-        for l in range(0,3):
-            str.points[l].co = copy.copy(tuple(v[l]))
-        
-        str.points[3].co[0] = v[3][0]
-        str.points[3].co[1] = v[3][1]
-        str.points[3].co[2] = v[3][2]
-        print("\ncreated strokes: ") # debug
-        for i in range(0,4): 
-            print(i, " : ", str.points[i].co) 
-        print('\n')
-        # done
-        
+    def execute(self, context):
+        fCorrectionAdd('CorrectionPink')
         return {'FINISHED'}
 
 class CorrectionRemove(bpy.types.Operator):
