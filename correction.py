@@ -74,15 +74,13 @@ class CorrectionAdd(bpy.types.Operator):
         for l in range(0,3):
             str.points[l].co = copy.copy(tuple(v[l]))
         
-        str.points[3].co = tuple(v[3])
+        
         print("\ncreated strokes: ") # debug
         for i in range(0,4): 
             print(i, " : ", str.points[i].co) 
         print('\n')
         # done
         
-
-
         return {'FINISHED'}
 
 class CorrectionRemove(bpy.types.Operator):
