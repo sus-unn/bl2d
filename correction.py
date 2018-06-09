@@ -40,6 +40,8 @@ class CorrectionAdd(bpy.types.Operator):
         return bl2d.poll()
         
     def execute(self, context):
+        print("\nAdd correction paper\n") # debug
+        
         if not bpy.context.scene.grease_pencil.layers.active.frames:
             bpy.ops.gpencil.blank_frame_add()
         str = bpy.context.scene.grease_pencil.layers.active.active_frame.strokes.new(colorname='CorrectionYellow')
@@ -59,6 +61,8 @@ class CorrectionAdd(bpy.types.Operator):
         v[1] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[1].co) 
         v[2] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[3].co) 
         v[3] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[2].co) 
+        print("local coordinates:")
+        print(v)
         
         # get global coordinates
         for i in range (0,4):
@@ -85,7 +89,10 @@ class CorrectionAdd(bpy.types.Operator):
         str.points[2].co = (-2.0,1.0,0.0)
         str.points[3].co = (-2.0,1.0,0.0)
         '''
-        
+        print("\ncreated strokes: ") # debug
+        for i in range(0,3): 
+            print(str.points[i].co) 
+        print('\n')
         # done
         
 
