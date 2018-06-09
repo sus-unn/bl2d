@@ -70,16 +70,14 @@ class CorrectionAdd(bpy.types.Operator):
         print("\nInitial copy:")
         print(v)
         
-        print("\nInitial copy (tuple):")
-        print(tuple(v))
-        
         # v[3] = loc = bpy.data.objects['Sheet_Base'].matrix_world.to_translation()
         for l in range(0,3):
             str.points[l].co = copy.copy(tuple(v[l]))
         
+        str.points[3].co = tuple(v[3])
         print("\ncreated strokes: ") # debug
-        for i in range(0,3): 
-            print(str.points[i].co) 
+        for i in range(0,4): 
+            print(i, " : ", str.points[i].co) 
         print('\n')
         # done
         
