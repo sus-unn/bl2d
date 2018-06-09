@@ -11,7 +11,7 @@ What is BL2D?
 BL2D helps integrating blender into 2d animation -especially Japanese- pipeline by providing add-on and template.
 In BL2D, you can make Layout/Genga. (Key animation) (We are considering supporting later part of the pipeline after blender 2.8)
 
-latest stable release is 0.6.7
+latest stable release is 0.7.0 alpha
 
 
 Before you use
