@@ -38,6 +38,22 @@ class CorrectionAdd(bpy.types.Operator):
         return bl2d.poll()
         
     def execute(self, context):
+    
+        str = bpy.context.scene.grease_pencil.layers.active.active_frame.strokes.new(colorname='CorrectionYellow')
+        str.draw_mode = '3DSPACE'
+        str.line_width = 1
+        str.points.add(count=4)
+        
+        str.points[0].co = (2.0,1.0,0.0)
+        str.points[1].co = (-2.0,1.0,0.0)
+        str.points[2].co = (-2.0,1.0,0.0)
+        str.points[3].co = (-2.0,1.0,0.0)
+      
+        
+        # done
+        
+
+
         return {'FINISHED'}
 
 class CorrectionRemove(bpy.types.Operator):
