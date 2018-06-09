@@ -97,15 +97,11 @@ class VIEW3D_PT_tools_bl2d_sheet(View3DPanel, Panel):
         
         col.label(text = "Correction paper")
         
-        row = col.row()
+        col.operator("gpencil.correctionaddyellow", text = "Add yellow correction paper")
+        col.operator("gpencil.correctionaddblue", text = "Add blue correction paper")
         
-        row.operator("gpencil.correctionadd", text = "Add correction paper")
-        row.operator("gpencil.correctionrm", text = "Remove correction paper")
-        
-        col = layout.column(align = True)
-        
-        col.operator("gpencil.correctionchcol", text = "Change correction color")
-        col.operator("gpencil.correctionresz", text = "Resize correction paper")
+        col.operator("gpencil.correctionaddgreen", text = "Add green correction paper")
+        col.operator("gpencil.correctionaddpink", text = "Add pink correction paper")
         
         col = layout.column() 
         col = layout.column()
