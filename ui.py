@@ -17,8 +17,6 @@
 # ##### END GPL LICENSE BLOCK #####
 # Contributors:
 # Sus-unn
-
-
 from . import bl2d
 from . import key_export
 from . import preview_full
@@ -33,7 +31,6 @@ from bpy.types import Menu, Panel, UIList
 class View3DPanel:
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'TOOLS'
-
 
 class VIEW3D_PT_tools_bl2d_info(View3DPanel, Panel):
 
@@ -52,7 +49,6 @@ class VIEW3D_PT_tools_bl2d_info(View3DPanel, Panel):
         box.label("Info")
         box.label("Version 0.6.7")
         col=layout.column()
-        
         
 class VIEW3D_PT_tools_bl2d_output(View3DPanel, Panel):
 

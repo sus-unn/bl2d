@@ -18,11 +18,11 @@
 # Contributors:
 # Sus-unn
 
-#This file contains shared variables
+# This file contains shared variables
 
 inch_ratio = 1/25.399
-scene = list() #empty
-gp_layers = list() #empty
+scene = list() #e mpty
+gp_layers = list() #e mpty
 
 fpath = " "
 fname = "Image"

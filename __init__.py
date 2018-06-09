@@ -46,10 +46,8 @@ else:
     from . import preview_full
     from . import correction
     
-    
 import os
 import bpy
-
 
 '''    
 class SetTimeText(bpy.types.Operator):
@@ -62,22 +60,13 @@ class SetTimeText(bpy.types.Operator):
         return {'RUNNING_MODAL'}
 
 '''
-# bl2d_icons = None
-
     
 def register():
-    # global bl2d_icons
-    # bl2d_icons = bpy.utils.previews.new()
-    # script_file = os.path.realpath(__file__)
-    # bl2d_icons.load("custom_icon", os.path.join(os.path.dirname(script_file),"icons","bl2d_ico.png"), 'IMAGE')
     bpy.utils.register_module(__name__)
-    
     
 def unregister():
     global custom_icons
-    # bpy.utils.previews.remove(bl2d_icons)
     bpy.utils.unregister_module(__name__)
     
 if __name__ == "__main__":
     register()
-
