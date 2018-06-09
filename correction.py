@@ -20,6 +20,8 @@
 
 import bpy
 import os
+import copy
+
 from . import bl2d
 
 # we need UI classes for:
@@ -44,11 +46,29 @@ class CorrectionAdd(bpy.types.Operator):
         str.line_width = 1
         str.points.add(count=4)
         
-        str.points[0].co = (2.0,1.0,0.0)
+        # copy world coordinate of each vertices in Sheet_Base to v
+        # for loop in v
+        
+        v = [[[0],[0],[0]], [[0],[0],[0]], [[0],[0],[0]], [[0],[0],[0]]]
+        # globa_coord = bpy.data.objects['Sheet_Base']matrix_world * bpy.data.objects['Sheet_Base'].data.vertices[0].co[0]
+        
+        # copy coordinates
+        for i in range(0, 3):
+            v[i] = copy.copy(bpy.data.objects['Sheet_Base'].data.vertices[i].co)
+        # get global coordinates
+        for j in range(0,3):
+            for k in range(0,2):
+                v[j][k] = bpy.data.objects['Sheet_Base'].matrix_world * v[j][k]
+                
+        for l in range(0,3):
+            str.points[l].co = copy.deepcopy(tuple(v[l]))
+            
+        '''
+        str.points[0].co = (0.0,1.0,0.0)
         str.points[1].co = (-2.0,1.0,0.0)
         str.points[2].co = (-2.0,1.0,0.0)
         str.points[3].co = (-2.0,1.0,0.0)
-      
+        '''
         
         # done
         
