@@ -108,7 +108,9 @@ class ExportKey(bpy.types.Operator):
             if(each_gp_layer.info[0] == "*"):
                 continue
             each_gp_layer.hide = False # unhide current layer and...
+            each_gp_layer.line_change += 5
             key_export(each_gp_layer.info)
+            each_gp_layer.line_change -= 5
             each_gp_layer.hide = True #...hide current layer again.
         
         for each_gp_layer in bl2d.gp_layers: # unhide all GPencil Layers
