@@ -26,7 +26,7 @@ BL2D는 레이아웃/원화를 제작하도록 지원하고 있습니다. (blend
 
 - 블렌더를 실행합니다.
 
-- File > User Preferences > Add-ons > Install Add-on from file 를 누르고 Bl2D zip 파일을 니다.
+- File > User Preferences > Add-ons > Install Add-on from file 를 누르고 BL2D zip 파일을 엽니다.
 
 - 애드온을 활성화합니다.
   
